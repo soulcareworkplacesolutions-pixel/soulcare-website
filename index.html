@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoulCare Workplace Solutions — Measurable Corporate Wellness</title>
+  <meta name="description" content="SoulCare delivers structured, measurable employee wellness programmes with Workplace Health Index scoring and quantified ROI. Guwahati | Bangalore | Pan-India.">
+  <meta name="keywords" content="corporate wellness, employee wellness India, workplace health index, WPI, ROI wellness, Guwahati, Bangalore, SoulCare">
+  <meta property="og:title" content="SoulCare — Corporate Wellness, Measured">
+  <meta property="og:description" content="Structured employee wellness with Workplace Health Index and quantified ROI for every engagement.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --teal: #0F4C5C;
+      --teal-dark: #0A323C;
+      --teal-light: #E8F1F3;
+      --coral: #E36414;
+      --coral-light: #FFD9C0;
+      --gold: #FB8B24;
+      --text: #1F2937;
+      --text-muted: #6B7280;
+      --bg: #FAFAF8;
+      --white: #FFFFFF;
+      --divider: #E5E7EB;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--bg); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    .serif { font-family: 'DM Serif Display', serif; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; width: 100%; z-index: 100; background: rgba(250,250,248,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--divider); }
+    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo { font-weight: 700; font-size: 1.1rem; color: var(--teal); text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; }
+    .nav-logo span { color: var(--coral); }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a { text-decoration: none; color: var(--text-muted); font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--teal); }
+    .nav-cta { background: var(--teal) !important; color: var(--white) !important; padding: 0.6rem 1.4rem !important; border-radius: 6px; font-weight: 600 !important; }
+    .nav-cta:hover { background: var(--teal-dark) !important; }
+    .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--teal); margin: 5px 0; }
+
+    /* HERO */
+    .hero { min-height: 100vh; display: flex; align-items: center; background: var(--teal); position: relative; overflow: hidden; padding: 8rem 2rem 4rem; }
+    .hero::before { content: ''; position: absolute; top: -20%; right: -10%; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(227,100,20,0.15), transparent 70%); }
+    .hero::after { content: ''; position: absolute; bottom: -30%; left: -5%; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(251,139,36,0.1), transparent 70%); }
+    .hero-inner { max-width: 1200px; margin: 0 auto; width: 100%; position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    .hero-content { }
+    .hero-label { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; opacity:0; animation: fadeUp 0.6s ease 0.2s forwards; }
+    .hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(2.5rem, 5vw, 4rem); color: var(--white); line-height: 1.15; opacity:0; animation: fadeUp 0.6s ease 0.4s forwards; }
+    .hero h1 em { color: var(--coral); font-style: italic; }
+    .hero-sub { font-size: 1.1rem; color: rgba(255,255,255,0.75); margin-top: 1.5rem; line-height: 1.8; opacity:0; animation: fadeUp 0.6s ease 0.6s forwards; }
+    .hero-actions { margin-top: 2.5rem; display: flex; gap: 1rem; flex-wrap: wrap; opacity:0; animation: fadeUp 0.6s ease 0.8s forwards; }
+    .btn-primary { background: var(--coral); color: var(--white); padding: 0.9rem 2rem; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 0.95rem; transition: transform 0.2s, box-shadow 0.2s; display: inline-block; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(227,100,20,0.3); }
+    .btn-secondary { background: transparent; color: var(--white); padding: 0.9rem 2rem; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 0.95rem; border: 1px solid rgba(255,255,255,0.3); transition: border-color 0.2s; display: inline-block; }
+    .btn-secondary:hover { border-color: var(--white); }
+
+    /* Hero image mosaic */
+    .hero-mosaic { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 12px; opacity:0; animation: fadeUp 0.6s ease 1s forwards; }
+    .hero-mosaic img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; }
+    .hero-mosaic img:first-child { border-radius: 12px 12px 4px 4px; }
+
+    .hero-stats { grid-column: 1 / -1; display: flex; gap: 3rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); opacity:0; animation: fadeUp 0.6s ease 1.2s forwards; }
+    .hero-stat-num { font-family: 'DM Serif Display', serif; font-size: 2.2rem; color: var(--gold); }
+    .hero-stat-label { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 0.3rem; max-width: 140px; }
+
+    /* IMAGE STRIP */
+    .image-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+    .image-strip img { width: 100%; height: 280px; object-fit: cover; transition: transform 0.4s; }
+    .image-strip img:hover { transform: scale(1.03); }
+
+    /* SECTIONS */
+    section { padding: 6rem 2rem; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--coral); margin-bottom: 1rem; }
+    .section-title { font-family: 'DM Serif Display', serif; font-size: clamp(2rem, 4vw, 3rem); color: var(--teal-dark); line-height: 1.2; max-width: 700px; }
+    .section-subtitle { color: var(--text-muted); font-size: 1.05rem; margin-top: 1rem; max-width: 600px; line-height: 1.8; }
+
+    /* ABOUT */
+    .about { background: var(--white); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3rem; align-items: center; }
+    .about-text p { margin-bottom: 1.2rem; color: var(--text); }
+    .about-text p strong { color: var(--teal); }
+    .about-highlight { background: var(--teal); padding: 3rem; border-radius: 16px; color: var(--white); }
+    .about-highlight h3 { font-family: 'DM Serif Display', serif; font-size: 1.8rem; margin-bottom: 1rem; }
+    .about-highlight p { color: rgba(255,255,255,0.8); font-size: 0.95rem; line-height: 1.8; }
+    .about-highlight .stat-row { display: flex; gap: 2rem; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.15); }
+    .about-highlight .stat-item span { font-family: 'DM Serif Display', serif; font-size: 1.6rem; display: block; color: var(--gold); }
+    .about-highlight .stat-item small { font-size: 0.75rem; color: rgba(255,255,255,0.5); }
+
+    /* PILLARS */
+    .pillars { background: var(--bg); }
+    .pillars-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3rem; }
+    .pillar-card { background: var(--white); border-radius: 12px; padding: 0; border-left: 4px solid transparent; transition: transform 0.3s, box-shadow 0.3s; overflow: hidden; }
+    .pillar-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(15,76,92,0.08); }
+    .pillar-card:nth-child(1) { border-left-color: var(--coral); }
+    .pillar-card:nth-child(2) { border-left-color: var(--teal); }
+    .pillar-card:nth-child(3) { border-left-color: var(--gold); }
+    .pillar-card:nth-child(4) { border-left-color: #10B981; }
+    .pillar-img { width: 100%; height: 160px; object-fit: cover; }
+    .pillar-body { padding: 1.5rem; }
+    .pillar-num { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; color: var(--text-muted); margin-bottom: 0.5rem; }
+    .pillar-card h3 { font-family: 'DM Serif Display', serif; font-size: 1.15rem; color: var(--teal-dark); margin-bottom: 0.6rem; }
+    .pillar-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
+
+    /* WPI */
+    .wpi { background: var(--teal); color: var(--white); }
+    .wpi .section-label { color: var(--gold); }
+    .wpi .section-title { color: var(--white); }
+    .wpi .section-subtitle { color: rgba(255,255,255,0.7); }
+    .wpi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem; }
+    .wpi-card { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 2.5rem; }
+    .wpi-card h3 { font-family: 'DM Serif Display', serif; font-size: 1.5rem; margin-bottom: 0.5rem; }
+    .wpi-card .subtitle { color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-bottom: 1.5rem; }
+    .wpi-card ul { list-style: none; }
+    .wpi-card li { padding: 0.4rem 0; color: rgba(255,255,255,0.85); font-size: 0.9rem; padding-left: 1.2rem; position: relative; }
+    .wpi-card li::before { content: '→'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+    .wpi-note { text-align: center; margin-top: 2rem; color: rgba(255,255,255,0.5); font-size: 0.85rem; font-style: italic; }
+
+    /* SECTORS */
+    .sectors { background: var(--white); }
+    .sectors-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+    .sector-card { padding: 1.8rem; border: 1px solid var(--divider); border-radius: 12px; transition: border-color 0.3s; }
+    .sector-card:hover { border-color: var(--teal); }
+    .sector-icon { font-size: 1.8rem; margin-bottom: 0.8rem; }
+    .sector-card h3 { font-size: 1rem; font-weight: 700; color: var(--teal-dark); margin-bottom: 0.4rem; }
+    .sector-card p { font-size: 0.82rem; color: var(--text-muted); }
+
+    /* TEAM */
+    .team { background: var(--bg); }
+    .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 3rem; }
+    .team-card { text-align: center; }
+    .team-photo { width: 180px; height: 180px; border-radius: 50%; margin: 0 auto 1.2rem; object-fit: cover; border: 4px solid var(--teal-light); transition: border-color 0.3s, transform 0.3s; }
+    .team-card:hover .team-photo { border-color: var(--coral); transform: scale(1.03); }
+    /* Placeholder for when no photo is uploaded yet */
+    .team-placeholder { width: 180px; height: 180px; border-radius: 50%; margin: 0 auto 1.2rem; background: var(--teal); display: flex; align-items: center; justify-content: center; font-family: 'DM Serif Display', serif; font-size: 3rem; color: var(--white); border: 4px solid var(--teal-light); transition: border-color 0.3s; }
+    .team-card:hover .team-placeholder { border-color: var(--coral); }
+    .team-card h3 { font-family: 'DM Serif Display', serif; font-size: 1.2rem; color: var(--teal-dark); margin-bottom: 0.2rem; }
+    .team-card .team-role { font-size: 0.9rem; font-weight: 600; color: var(--coral); margin-bottom: 0.3rem; }
+    .team-card .team-location { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.6rem; }
+    .team-card .team-bio { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; max-width: 280px; margin: 0 auto; }
+    .team-card a { color: var(--teal); text-decoration: none; font-size: 0.82rem; font-weight: 600; }
+    .team-card a:hover { color: var(--coral); }
+
+    /* PRICING */
+    .pricing { background: var(--white); }
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+    .price-card { background: var(--bg); border-radius: 12px; padding: 2.5rem 2rem; border: 1px solid var(--divider); transition: transform 0.3s, box-shadow 0.3s; position: relative; }
+    .price-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(15,76,92,0.08); }
+    .price-card.featured { background: var(--teal); color: var(--white); border: none; transform: scale(1.03); }
+    .price-card.featured:hover { transform: scale(1.03) translateY(-4px); }
+    .price-badge { position: absolute; top: -12px; right: 20px; background: var(--gold); color: var(--white); padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.7rem; font-weight: 700; }
+    .price-card h3 { font-family: 'DM Serif Display', serif; font-size: 1.3rem; margin-bottom: 0.3rem; }
+    .price-card .price-desc { font-size: 0.82rem; margin-bottom: 1.5rem; opacity: 0.6; }
+    .price-card .price-amount { font-family: 'DM Serif Display', serif; font-size: 1.1rem; margin-bottom: 0.3rem; }
+    .price-card .price-amount span { font-size: 2rem; }
+    .price-card .price-note { font-size: 0.75rem; opacity: 0.5; margin-bottom: 1.5rem; }
+    .price-card .price-features { list-style: none; }
+    .price-card .price-features li { padding: 0.35rem 0; font-size: 0.85rem; padding-left: 1.4rem; position: relative; }
+    .price-card .price-features li::before { content: '✓'; position: absolute; left: 0; font-weight: 700; color: var(--coral); }
+    .price-card.featured .price-features li::before { color: var(--gold); }
+    .pricing-note { text-align: center; margin-top: 2rem; font-size: 0.85rem; color: var(--text-muted); font-style: italic; }
+
+    /* COMPLIANCE */
+    .compliance { background: var(--bg); }
+    .compliance-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3rem; }
+    .compliance-item { text-align: center; padding: 2rem 1rem; }
+    .compliance-item .icon { width: 56px; height: 56px; border-radius: 50%; background: var(--teal-light); margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; }
+    .compliance-item h4 { font-size: 0.9rem; color: var(--teal-dark); margin-bottom: 0.4rem; }
+    .compliance-item p { font-size: 0.78rem; color: var(--text-muted); }
+
+    /* CTA */
+    .cta { background: var(--teal-dark); padding: 5rem 2rem; text-align: center; }
+    .cta h2 { font-family: 'DM Serif Display', serif; font-size: clamp(2rem, 4vw, 3rem); color: var(--white); margin-bottom: 1rem; }
+    .cta p { color: rgba(255,255,255,0.6); max-width: 500px; margin: 0 auto 2rem; }
+    .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    /* FOOTER */
+    footer { background: var(--teal); padding: 3rem 2rem 2rem; color: rgba(255,255,255,0.7); }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 2rem; }
+    .footer-brand .footer-logo { font-weight: 700; font-size: 1rem; color: var(--white); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .footer-brand p { font-size: 0.82rem; max-width: 280px; }
+    .footer-contact h4 { color: var(--white); font-size: 0.85rem; margin-bottom: 0.8rem; }
+    .footer-contact a { display: block; color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.85rem; padding: 0.2rem 0; transition: color 0.2s; }
+    .footer-contact a:hover { color: var(--gold); }
+    .footer-bottom { max-width: 1200px; margin: 2rem auto 0; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; font-size: 0.75rem; color: rgba(255,255,255,0.4); }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--bg); padding: 1.5rem 2rem; border-bottom: 1px solid var(--divider); gap: 1rem; }
+      .nav-toggle { display: block; }
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-mosaic { display: none; }
+      .about-grid { grid-template-columns: 1fr; }
+      .pillars-grid { grid-template-columns: 1fr 1fr; }
+      .wpi-grid { grid-template-columns: 1fr; }
+      .sectors-grid { grid-template-columns: 1fr 1fr; }
+      .team-grid { grid-template-columns: 1fr 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .price-card.featured { transform: none; }
+      .compliance-grid { grid-template-columns: 1fr 1fr; }
+      .hero-stats { flex-wrap: wrap; gap: 1.5rem; }
+      .image-strip { grid-template-columns: 1fr 1fr; }
+      .image-strip img { height: 200px; }
+    }
+    @media (max-width: 600px) {
+      .pillars-grid { grid-template-columns: 1fr; }
+      .sectors-grid { grid-template-columns: 1fr; }
+      .compliance-grid { grid-template-columns: 1fr; }
+      .image-strip { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; }
+      .footer-bottom { flex-direction: column; gap: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Soul<span>Care</span></a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#pillars">Framework</a>
+      <a href="#wpi">WPI & ROI</a>
+      <a href="#team">Team</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact" class="nav-cta">Get in Touch</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-label">Corporate Wellness · Measured</div>
+      <h1>Corporate Wellness,<br><em>Measured.</em></h1>
+      <p class="hero-sub">A four-pillar wellness system that produces a Workplace Health Index score and a rupee-value ROI for every engagement. Not activities. Outcomes.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Schedule a Conversation</a>
+        <a href="#pillars" class="btn-secondary">See the Framework</a>
+      </div>
+    </div>
+    <div class="hero-mosaic">
+      <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop" alt="Corporate wellness session">
+      <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop" alt="Group fitness training">
+      <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&h=400&fit=crop" alt="Corporate yoga and mindfulness">
+      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop" alt="Modern workplace wellness">
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">4</div>
+        <div class="hero-stat-label">Integrated wellness pillars</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">WPI</div>
+        <div class="hero-stat-label">Workplace Health Index — scored 0 to 100</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">ROI</div>
+        <div class="hero-stat-label">Quantified in rupees — not vanity metrics</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMAGE STRIP -->
+<div class="image-strip">
+  <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&h=400&fit=crop" alt="Office stretching exercise">
+  <img src="https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?w=600&h=400&fit=crop" alt="Group wellness class">
+  <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=600&h=400&fit=crop" alt="Corporate mindfulness session">
+  <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&h=400&fit=crop" alt="Healthy nutrition workplace">
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="section-inner">
+    <div class="section-label">About SoulCare</div>
+    <div class="section-title serif">The problem isn't wellness spend.<br>It's <em>unmeasured</em> wellness spend.</div>
+    <div class="about-grid fade-in">
+      <div class="about-text">
+        <p>Most Indian employers spend meaningfully on employee wellness — health camps, insurance top-ups, occasional yoga sessions, one-off webinars. Almost none can prove what that spend actually changed.</p>
+        <p><strong>SoulCare Workplace Solutions</strong> was built on one observation: corporate wellness in India is activity-driven, not outcome-driven. We built a system that changes that.</p>
+        <p>Every SoulCare engagement produces a <strong>Workplace Health Index (WPI)</strong> score at baseline, monthly, and conclusion — along with a quantified Return on Investment figure in rupees. Not participation rates. Not survey satisfaction. Actual measurable health outcomes tied to actual business value.</p>
+        <p>We are a private limited company headquartered in Guwahati, Assam, with operations in Bangalore and expanding across India.</p>
+      </div>
+      <div class="about-highlight">
+        <h3 class="serif">Why measurement changes everything</h3>
+        <p>When wellness is measured, it stops being a cost centre and starts being an investment. The HR head can defend it. The CFO can verify it. The employee can feel it. And the renewal rate reflects it.</p>
+        <div class="stat-row">
+          <div class="stat-item">
+            <span>4–6×</span>
+            <small>Typical ROI over 12 months (industry benchmarks)</small>
+          </div>
+          <div class="stat-item">
+            <span>90 days</span>
+            <small>From pilot kickoff to board-ready ROI report</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PILLARS with images -->
+<section class="pillars" id="pillars">
+  <div class="section-inner">
+    <div class="section-label">The Framework</div>
+    <div class="section-title serif">Four pillars. One system.</div>
+    <div class="section-subtitle">Every programme is built on these four pillars. Clients can buy one or all four. The framework is what makes outcomes comparable.</div>
+    <div class="pillars-grid">
+      <div class="pillar-card fade-in">
+        <img class="pillar-img" src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&h=300&fit=crop" alt="Physiotherapy and ergonomic assessment">
+        <div class="pillar-body">
+          <div class="pillar-num">PILLAR 01</div>
+          <h3 class="serif">Clinical & Pain Management</h3>
+          <p>Ergonomic audits, physiotherapy, posture correction, rehabilitation protocols. Addressing the desk-pain epidemic.</p>
+        </div>
+      </div>
+      <div class="pillar-card fade-in">
+        <img class="pillar-img" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=300&fit=crop" alt="Corporate fitness and movement training">
+        <div class="pillar-body">
+          <div class="pillar-num">PILLAR 02</div>
+          <h3 class="serif">Movement & Performance</h3>
+          <p>Mobility drills, desk-break routines, strength training, fitness activation. Reversing sedentary damage.</p>
+        </div>
+      </div>
+      <div class="pillar-card fade-in">
+        <img class="pillar-img" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&h=300&fit=crop" alt="Corporate yoga and mindfulness practice">
+        <div class="pillar-body">
+          <div class="pillar-num">PILLAR 03</div>
+          <h3 class="serif">Mental Wellness & Stress</h3>
+          <p>Stress workshops, breathwork, mindfulness practices, focus training. Addressing the burnout epidemic.</p>
+        </div>
+      </div>
+      <div class="pillar-card fade-in">
+        <img class="pillar-img" src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=500&h=300&fit=crop" alt="Healthy nutrition and lifestyle guidance">
+        <div class="pillar-body">
+          <div class="pillar-num">PILLAR 04</div>
+          <h3 class="serif">Lifestyle & Preventive Health</h3>
+          <p>Nutrition guidance, sleep education, habit-building, preventive care. The daily choices that compound.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WPI & ROI -->
+<section class="wpi" id="wpi">
+  <div class="section-inner">
+    <div class="section-label">What Makes Us Different</div>
+    <div class="section-title serif">We measure. Then we measure again.</div>
+    <div class="section-subtitle">Every engagement produces a client-ready report with quantified outcomes — not just activity logs.</div>
+    <div class="wpi-grid fade-in">
+      <div class="wpi-card">
+        <h3 class="serif">Workplace Health Index</h3>
+        <div class="subtitle">Scored 0–100 · Measured at baseline, monthly, and final</div>
+        <ul>
+          <li>Pain sub-index (Clinical pillar)</li>
+          <li>Stress sub-index (Mental pillar)</li>
+          <li>Energy & movement sub-index</li>
+          <li>Lifestyle sub-index</li>
+          <li>Composite WPI score tracked over time</li>
+        </ul>
+      </div>
+      <div class="wpi-card">
+        <h3 class="serif">Quantified ROI</h3>
+        <div class="subtitle">In rupees — a number the CFO can verify</div>
+        <ul>
+          <li>Absenteeism days saved × cost-to-company</li>
+          <li>Productivity uplift × workforce value</li>
+          <li>Programme cost as the denominator</li>
+          <li>ROI multiple calculated and reported</li>
+          <li>Board-ready final report at programme end</li>
+        </ul>
+      </div>
+    </div>
+    <div class="wpi-note">Industry benchmarks suggest 4–6× ROI on well-structured wellness programmes over 12 months. We measure and report the actual number for every engagement.</div>
+  </div>
+</section>
+
+<!-- SECTORS -->
+<section class="sectors">
+  <div class="section-inner">
+    <div class="section-label">Who We Work With</div>
+    <div class="section-title serif">Built for India's hardest-working sectors.</div>
+    <div class="section-subtitle">Wherever workforces are large, shifts are long, and measurable outcomes matter.</div>
+    <div class="sectors-grid fade-in">
+      <div class="sector-card"><div class="sector-icon">🏭</div><h3>PSUs & Energy</h3><p>Refineries, power, oil & gas — shift-based, field-posted workforces.</p></div>
+      <div class="sector-card"><div class="sector-icon">🏥</div><h3>Healthcare</h3><p>Hospitals and medical colleges — frontline burnout, clinical staff.</p></div>
+      <div class="sector-card"><div class="sector-icon">🎓</div><h3>Education</h3><p>IIMs, universities — faculty stress, non-teaching staff health.</p></div>
+      <div class="sector-card"><div class="sector-icon">🏦</div><h3>Banking & Finance</h3><p>Banks — desk-bound staff, branch attrition, customer-facing pressure.</p></div>
+      <div class="sector-card"><div class="sector-icon">💻</div><h3>IT & ITES</h3><p>Software, BPO — sedentary work, deadline pressure, burnout.</p></div>
+      <div class="sector-card"><div class="sector-icon">🏛️</div><h3>Government & Civic</h3><p>Municipal bodies, state agencies — public service staff welfare.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team" id="team">
+  <div class="section-inner">
+    <div class="section-label">Our Team</div>
+    <div class="section-title serif">The people behind the system.</div>
+    <div class="section-subtitle">A small, committed team building India's most measurable wellness brand.</div>
+    <div class="team-grid fade-in">
+
+      <div class="team-card">
+        <!-- REPLACE: Upload souvik.jpg to your repo and change src to "souvik.jpg" -->
+        <div class="team-placeholder">SD</div>
+        <h3 class="serif">Souvik De</h3>
+        <div class="team-role">Founder & Director</div>
+        <div class="team-location">📍 Guwahati (HQ) · Hybrid</div>
+        <p class="team-bio">Built SoulCare from the ground up — brand, methodology, WPI framework, compliance, and the business engine that powers every engagement.</p>
+        <a href="https://www.linkedin.com/in/souvikde1980/" target="_blank">LinkedIn →</a>
+      </div>
+
+      <div class="team-card">
+        <!-- REPLACE: Upload chandrima.jpg to your repo and change src to "chandrima.jpg" -->
+        <div class="team-placeholder">CC</div>
+        <h3 class="serif">Chandrima Chatterjee</h3>
+        <div class="team-role">City Lead — Bangalore East & North</div>
+        <div class="team-location">📍 Bangalore</div>
+        <p class="team-bio">Corporate transformation expert. Former gym center head at Tech Mahindra and center manager at Cisco. Certified personal trainer, S&C coach, sports nutritionist.</p>
+        <a href="https://www.linkedin.com/in/chandrima-c-6587951a7/" target="_blank">LinkedIn →</a>
+      </div>
+
+      <div class="team-card">
+        <!-- REPLACE: Upload luqman.jpg to your repo and change src to "luqman.jpg" -->
+        <div class="team-placeholder">SL</div>
+        <h3 class="serif">Syed Luqman</h3>
+        <div class="team-role">City Lead — Bangalore West & South</div>
+        <div class="team-location">📍 Bangalore</div>
+        <p class="team-bio">Sales and business development professional driving SoulCare's presence across South and West Bangalore's corporate corridor.</p>
+        <a href="https://www.linkedin.com/in/syed-luqman-903b622b8/" target="_blank">LinkedIn →</a>
+      </div>
+
+      <div class="team-card">
+        <!-- REPLACE: Upload arghajit.jpg to your repo and change src to "arghajit.jpg" -->
+        <div class="team-placeholder">AD</div>
+        <h3 class="serif">Arghajit Dutta</h3>
+        <div class="team-role">Regional Manager — Meghalaya</div>
+        <div class="team-location">📍 Shillong, Meghalaya</div>
+        <p class="team-bio">On-ground operations and client relationships across the Northeast. Managing the Meghalaya territory — institutions, banks, and government bodies.</p>
+        <a href="#" target="_blank">LinkedIn →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="section-inner">
+    <div class="section-label">Investment</div>
+    <div class="section-title serif">Transparent, outcome-linked pricing.</div>
+    <div class="section-subtitle">Pilots start small. Commitment deepens as outcomes prove themselves.</div>
+    <div class="pricing-grid fade-in">
+      <div class="price-card">
+        <h3 class="serif">1-Day Wellness Event</h3>
+        <div class="price-desc">4 hours · All 4 pillars sampled</div>
+        <div class="price-amount">From <span>₹250</span></div>
+        <div class="price-note">per employee</div>
+        <ul class="price-features">
+          <li>All 4 pillars sampled</li>
+          <li>Certified specialists</li>
+          <li>DPDP compliant</li>
+          <li>Great first taste of SoulCare</li>
+        </ul>
+      </div>
+      <div class="price-card featured">
+        <div class="price-badge">MOST POPULAR</div>
+        <h3 class="serif">3-Month Programme</h3>
+        <div class="price-desc">Full 4 pillars · WPI + ROI report</div>
+        <div class="price-amount">From <span>₹1,050</span></div>
+        <div class="price-note">per employee · 12 weeks</div>
+        <ul class="price-features">
+          <li>Baseline WPI assessment</li>
+          <li>Monthly WPI tracking</li>
+          <li>Quantified ROI report</li>
+          <li>Board-ready outcomes</li>
+          <li>Mid-programme review</li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <h3 class="serif">12-Month Programme</h3>
+        <div class="price-desc">Annual · Board-grade · CSR-eligible</div>
+        <div class="price-amount">From <span>₹3,500</span></div>
+        <div class="price-note">per employee · full year</div>
+        <ul class="price-features">
+          <li>Everything in 3-month</li>
+          <li>Quarterly board reports</li>
+          <li>Annual health benchmark</li>
+          <li>Strategic wellness partnership</li>
+        </ul>
+      </div>
+    </div>
+    <div class="pricing-note">Final pricing depends on cohort size, industry, and programme scope. A 20-minute call firms up an exact number.</div>
+  </div>
+</section>
+
+<!-- COMPLIANCE -->
+<section class="compliance">
+  <div class="section-inner">
+    <div class="section-label">Trust & Compliance</div>
+    <div class="section-title serif">Built for institutional buyers.</div>
+    <div class="compliance-grid fade-in">
+      <div class="compliance-item"><div class="icon">🛡️</div><h4>DPDP Act 2023</h4><p>Full compliance. Consented, encrypted, minimised.</p></div>
+      <div class="compliance-item"><div class="icon">📋</div><h4>Registered Pvt Ltd</h4><p>Incorporated with full contractual standing.</p></div>
+      <div class="compliance-item"><div class="icon">🔒</div><h4>Confidential by Default</h4><p>Aggregate-only reporting. Individual data stays private.</p></div>
+      <div class="compliance-item"><div class="icon">✅</div><h4>Vetted Specialists</h4><p>Verified credentials, enforced brand standards.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <h2 class="serif">Let's pilot one.</h2>
+  <p>A 3-month engagement, scoped to your workforce, delivering a final ROI number your leadership can verify.</p>
+  <div class="cta-actions">
+    <a href="mailto:souvik@soulcareworkplace.com" class="btn-primary">souvik@soulcareworkplace.com</a>
+    <a href="https://wa.me/916000895051" class="btn-secondary" target="_blank">WhatsApp</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">SOULCARE WORKPLACE SOLUTIONS</div>
+      <p>Measurable corporate wellness with Workplace Health Index scoring and quantified ROI for every engagement.</p>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <a href="mailto:souvik@soulcareworkplace.com">souvik@soulcareworkplace.com</a>
+      <a href="tel:+916000895051">+91 6000895051</a>
+      <a href="https://www.linkedin.com/in/souvikde1980/" target="_blank">LinkedIn — Souvik De</a>
+      <a href="https://www.linkedin.com/company/soulcare-workplace-solutions-pvt-ltd/" target="_blank">LinkedIn — SoulCare</a>
+    </div>
+    <div class="footer-contact">
+      <h4>Locations</h4>
+      <a href="#">Guwahati, Assam (HQ)</a>
+      <a href="#">Bangalore, Karnataka</a>
+      <a href="#">Shillong, Meghalaya</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 SoulCare Workplace Solutions Pvt. Ltd. All rights reserved.</span>
+    <span>Founded in Guwahati · Built for India</span>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
