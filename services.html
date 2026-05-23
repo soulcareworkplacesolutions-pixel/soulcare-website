@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Corporate Wellness Services | SoulCare Workplace</title>
+
+  <meta name="description"
+    content="Explore SoulCare Workplace corporate wellness services including ergonomics, movement, mental wellness, preventive health, and workplace wellbeing programs across India.">
+
+  <meta name="keywords"
+    content="Corporate Wellness Services, Employee Wellness India, Ergonomics, Mental Wellness, Workplace Wellness, SoulCare Workplace">
+
+  <meta property="og:title" content="Corporate Wellness Services | SoulCare Workplace">
+  <meta property="og:description"
+    content="Structured corporate wellness services designed for measurable employee wellbeing outcomes.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root {
+      --teal: #0F4C5C;
+      --teal-dark: #0A323C;
+      --teal-light: #E8F1F3;
+      --coral: #E36414;
+      --gold: #FB8B24;
+      --text: #1F2937;
+      --text-muted: #6B7280;
+      --bg: #FAFAF8;
+      --white: #FFFFFF;
+      --divider: #E5E7EB;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      background: rgba(250,250,248,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--divider);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.6rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo img {
+      height: 48px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--teal);
+    }
+
+    .nav-cta {
+      background: var(--teal);
+      color: white !important;
+      padding: 0.6rem 1.4rem;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .hero {
+      min-height: 75vh;
+      display: flex;
+      align-items: center;
+      background: var(--teal);
+      padding: 8rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(227,100,20,0.15), transparent 70%);
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      color: white;
+      line-height: 1.1;
+      max-width: 700px;
+    }
+
+    .hero-sub {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.78);
+      margin-top: 1.5rem;
+      line-height: 1.8;
+      max-width: 760px;
+    }
+
+    section {
+      padding: 6rem 2rem;
+    }
+
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--coral);
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--teal-dark);
+      line-height: 1.2;
+      max-width: 760px;
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin-top: 1rem;
+      max-width: 700px;
+      line-height: 1.8;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 4rem;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+
+    .service-content {
+      padding: 2rem;
+    }
+
+    .service-content h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.5rem;
+      color: var(--teal-dark);
+      margin-bottom: 1rem;
+    }
+
+    .service-content p {
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    .cta {
+      background: var(--teal-dark);
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    .cta p {
+      color: rgba(255,255,255,0.65);
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+
+    .btn-primary {
+      background: var(--coral);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    footer {
+      background: var(--teal);
+      padding: 3rem 2rem 2rem;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .footer-logo img {
+      height: 40px;
+      filter: brightness(0) invert(1);
+    }
+
+    .footer-contact h4 {
+      color: white;
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-contact a {
+      display: block;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      padding: 0.2rem 0;
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 2rem auto 0;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.4);
+    }
+
+    @media (max-width: 900px) {
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<nav>
+
+  <div class="nav-inner">
+
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="SoulCare Workplace">
+    </a>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="nav-cta">Get in Touch</a>
+    </div>
+
+  </div>
+
+</nav>
+
+<section class="hero">
+
+  <div class="hero-inner">
+
+    <div class="hero-label">
+      Corporate Wellness Services
+    </div>
+
+    <h1>
+      Structured wellness services designed for measurable outcomes.
+    </h1>
+
+    <p class="hero-sub">
+      SoulCare Workplace combines ergonomics, movement, mental wellness, and preventive healthcare into one integrated corporate wellness ecosystem.
+    </p>
+
+  </div>
+
+</section>
+
+<section>
+
+  <div class="section-inner">
+
+    <div class="section-label">
+      Our Services
+    </div>
+
+    <div class="section-title">
+      Four wellness pillars. One measurable framework.
+    </div>
+
+    <div class="section-subtitle">
+      Every program is designed to improve employee wellbeing, engagement, workplace health, and long-term organizational performance.
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+
+        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800" alt="Clinical and Ergonomics">
+
+        <div class="service-content">
+
+          <h3>
+            Clinical & Ergonomics
+          </h3>
+
+          <p>
+            Ergonomic assessments, posture correction, physiotherapy support, pain management, and workplace movement interventions designed to reduce discomfort and improve employee wellbeing.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="service-card">
+
+        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800" alt="Movement and Fitness">
+
+        <div class="service-content">
+
+          <h3>
+            Movement & Physical Wellness
+          </h3>
+
+          <p>
+            Mobility sessions, workplace fitness activation, stretching protocols, desk movement programs, and physical wellness initiatives focused on reducing sedentary fatigue.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="service-card">
+
+        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800" alt="Mental Wellness">
+
+        <div class="service-content">
+
+          <h3>
+            Mental Wellness Programs
+          </h3>
+
+          <p>
+            Stress management, mindfulness workshops, emotional wellbeing sessions, breathing techniques, and workplace mental wellness support programs.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="service-card">
+
+        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800" alt="Preventive Health">
+
+        <div class="service-content">
+
+          <h3>
+            Preventive Health & Lifestyle
+          </h3>
+
+          <p>
+            Nutrition guidance, sleep awareness, preventive healthcare education, healthy lifestyle coaching, and employee wellbeing habit-building initiatives.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="cta">
+
+  <h2>
+    Build A Healthier Workplace
+  </h2>
+
+  <p>
+    Partner with SoulCare Workplace to implement measurable employee wellness programs across your organization.
+  </p>
+
+  <a href="contact.html" class="btn-primary">
+    Schedule A Consultation
+  </a>
+
+</section>
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+
+      <div class="footer-logo">
+        <img src="logo.png" alt="SoulCare Workplace">
+      </div>
+
+      <p>
+        Measurable corporate wellness with structured employee wellbeing programs across India.
+      </p>
+
+    </div>
+
+    <div class="footer-contact">
+
+      <h4>Contact</h4>
+
+      <a href="mailto:souvik@soulcareworkplace.com">
+        souvik@soulcareworkplace.com
+      </a>
+
+      <a href="tel:+916000895051">
+        +91 6000895051
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+
+    <span>
+      © 2026 SoulCare Workplace Solutions Pvt. Ltd.
+    </span>
+
+    <span>
+      Guwahati · Bangalore · Shillong
+    </span>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
