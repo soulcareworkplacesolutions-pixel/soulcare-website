@@ -2,75 +2,164 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>About SoulCare Workplace</title>
+  <title>About SoulCare Workplace | Corporate Wellness India</title>
 
   <meta name="description"
-    content="Learn about SoulCare Workplace and our measurable corporate wellness programs across India." />
+    content="Learn about SoulCare Workplace and our measurable corporate wellness solutions focused on employee wellbeing, ergonomics, mental wellness, and preventive healthcare across India." />
+
+  <meta name="keywords"
+    content="Corporate Wellness India, Employee Wellness Programs, Workplace Wellness, Ergonomics, Mental Wellness, SoulCare Workplace" />
+
+  <meta name="robots" content="index, follow" />
 
   <style>
 
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: Arial, sans-serif;
-      background: #f4f7f9;
+      background: #f5f7fa;
       color: #222;
+      line-height: 1.7;
     }
 
     .navbar {
       background: #0c5c75;
-      padding: 20px 40px;
+      padding: 20px 50px;
       color: white;
-      font-size: 24px;
-      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar h2 {
+      font-size: 26px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 15px;
     }
 
     .hero {
       background: linear-gradient(to right, #0c5c75, #117a9b);
       color: white;
-      padding: 80px 40px;
+      padding: 100px 20px;
       text-align: center;
     }
 
     .hero h1 {
-      font-size: 48px;
+      font-size: 52px;
       margin-bottom: 20px;
     }
 
     .hero p {
-      max-width: 800px;
+      max-width: 850px;
       margin: auto;
       font-size: 20px;
-      line-height: 1.6;
+      line-height: 1.8;
     }
 
-    .content {
-      padding: 60px 40px;
-      max-width: 1000px;
+    .container {
+      max-width: 1100px;
       margin: auto;
-      line-height: 1.8;
+      padding: 70px 20px;
+    }
+
+    .section-title {
+      font-size: 36px;
+      margin-bottom: 25px;
+      color: #0c5c75;
+    }
+
+    .content p {
+      margin-bottom: 25px;
+      font-size: 18px;
+    }
+
+    .highlight-box {
+      background: white;
+      padding: 35px;
+      border-radius: 12px;
+      margin-top: 40px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    .cta-section {
+      background: #0c5c75;
+      color: white;
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .cta-section h2 {
+      font-size: 38px;
+      margin-bottom: 20px;
+    }
+
+    .cta-section p {
+      max-width: 700px;
+      margin: auto;
+      margin-bottom: 35px;
       font-size: 18px;
     }
 
     .cta-button {
-      display: inline-block;
-      margin-top: 30px;
-      background: #0c5c75;
-      color: white;
-      padding: 16px 28px;
+      background: white;
+      color: #0c5c75;
       text-decoration: none;
+      padding: 16px 30px;
       border-radius: 8px;
       font-weight: bold;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    .cta-button:hover {
+      background: #e6e6e6;
     }
 
     .footer {
-      background: #0c5c75;
+      background: #082f3d;
       color: white;
       text-align: center;
-      padding: 20px;
-      margin-top: 60px;
+      padding: 25px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .navbar {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .navbar div {
+        margin-top: 10px;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
+
     }
 
   </style>
@@ -79,47 +168,99 @@
 
 <body>
 
-  <div class="navbar">
-    SoulCare Workplace
-  </div>
+  <nav class="navbar">
+
+    <h2>SoulCare Workplace</h2>
+
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+  </nav>
 
   <section class="hero">
 
     <h1>About SoulCare Workplace</h1>
 
     <p>
-      Structured corporate wellness programs designed to improve employee wellbeing,
-      engagement, productivity, and workplace health outcomes.
+      Corporate wellness, measured through structured employee wellbeing
+      programs designed for modern organizations across India.
     </p>
 
   </section>
 
-  <section class="content">
+  <section class="container">
+
+    <div class="content">
+
+      <h2 class="section-title">
+        Our Mission
+      </h2>
+
+      <p>
+        SoulCare Workplace was built to help organizations move beyond generic
+        wellness activities and implement measurable, structured, and scalable
+        employee wellbeing solutions.
+      </p>
+
+      <p>
+        Our programs combine ergonomics, movement, mental wellness,
+        preventive healthcare, and workplace engagement into a comprehensive
+        wellness framework tailored for modern corporate environments.
+      </p>
+
+      <p>
+        We work with organizations to improve employee wellbeing,
+        productivity, engagement, and workplace culture through outcome-driven
+        wellness strategies.
+      </p>
+
+      <div class="highlight-box">
+
+        <h2 class="section-title">
+          Our 4-Pillar Wellness Framework
+        </h2>
+
+        <p>
+          • Clinical & Ergonomics Support
+          <br><br>
+          • Movement & Physical Wellness
+          <br><br>
+          • Mental Wellness Programs
+          <br><br>
+          • Preventive Health & Lifestyle Guidance
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="cta-section">
+
+    <h2>
+      Build A Healthier Workplace
+    </h2>
 
     <p>
-      SoulCare Workplace delivers measurable and outcome-driven corporate wellness
-      solutions across India through a structured 4-Pillar Wellness Framework.
+      Partner with SoulCare Workplace to implement structured wellness
+      programs designed to improve employee wellbeing and workplace outcomes.
     </p>
 
-    <p>
-      Our programs focus on ergonomics, movement, preventive healthcare,
-      mental wellness, and employee wellbeing initiatives tailored for modern organizations.
-    </p>
-
-    <p>
-      We help businesses improve employee engagement, workplace culture,
-      productivity, and overall wellness outcomes through scalable wellness solutions.
-    </p>
-
-    <a class="cta-button" href="contact.html">
-      Book a Consultation
+    <a href="contact.html" class="cta-button">
+      Book A Consultation
     </a>
 
   </section>
 
-  <div class="footer">
+  <footer class="footer">
+
     © 2026 SoulCare Workplace. All Rights Reserved.
-  </div>
+
+  </footer>
 
 </body>
 
