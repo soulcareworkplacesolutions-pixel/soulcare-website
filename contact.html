@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact SoulCare Workplace | Corporate Wellness India</title>
+
+  <meta name="description"
+    content="Contact SoulCare Workplace for corporate wellness programs, ergonomics, mental wellness, preventive healthcare, and employee wellbeing solutions across India.">
+
+  <meta name="keywords"
+    content="Contact SoulCare Workplace, Corporate Wellness India, Employee Wellness Programs, Workplace Wellness">
+
+  <meta property="og:title" content="Contact SoulCare Workplace">
+  <meta property="og:description"
+    content="Get in touch with SoulCare Workplace for structured corporate wellness solutions.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root {
+      --teal: #0F4C5C;
+      --teal-dark: #0A323C;
+      --teal-light: #E8F1F3;
+      --coral: #E36414;
+      --gold: #FB8B24;
+      --text: #1F2937;
+      --text-muted: #6B7280;
+      --bg: #FAFAF8;
+      --white: #FFFFFF;
+      --divider: #E5E7EB;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      background: rgba(250,250,248,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--divider);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.6rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo img {
+      height: 48px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--teal);
+    }
+
+    .nav-cta {
+      background: var(--teal);
+      color: white !important;
+      padding: 0.6rem 1.4rem;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .hero {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      background: var(--teal);
+      padding: 8rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(227,100,20,0.15), transparent 70%);
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      color: white;
+      line-height: 1.1;
+      max-width: 700px;
+    }
+
+    .hero-sub {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.78);
+      margin-top: 1.5rem;
+      line-height: 1.8;
+      max-width: 760px;
+    }
+
+    section {
+      padding: 6rem 2rem;
+    }
+
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .contact-card {
+      background: white;
+      padding: 3rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+
+    .contact-card h2 {
+      font-family: 'DM Serif Display', serif;
+      color: var(--teal-dark);
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+    }
+
+    .contact-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-item h4 {
+      color: var(--teal);
+      margin-bottom: 0.4rem;
+    }
+
+    .contact-item a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .contact-item a:hover {
+      color: var(--coral);
+    }
+
+    .contact-info {
+      background: var(--teal);
+      color: white;
+      padding: 3rem;
+      border-radius: 16px;
+    }
+
+    .contact-info h2 {
+      font-family: 'DM Serif Display', serif;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+    }
+
+    .contact-info p {
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 1.2rem;
+    }
+
+    .btn-primary {
+      background: var(--coral);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    footer {
+      background: var(--teal);
+      padding: 3rem 2rem 2rem;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .footer-logo img {
+      height: 40px;
+      filter: brightness(0) invert(1);
+    }
+
+    .footer-contact h4 {
+      color: white;
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-contact a {
+      display: block;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      padding: 0.2rem 0;
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 2rem auto 0;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.4);
+    }
+
+    @media (max-width: 900px) {
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<nav>
+
+  <div class="nav-inner">
+
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="SoulCare Workplace">
+    </a>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="nav-cta">Get in Touch</a>
+    </div>
+
+  </div>
+
+</nav>
+
+<section class="hero">
+
+  <div class="hero-inner">
+
+    <div class="hero-label">
+      Contact SoulCare Workplace
+    </div>
+
+    <h1>
+      Let’s build a healthier workplace together.
+    </h1>
+
+    <p class="hero-sub">
+      Connect with SoulCare Workplace for structured corporate wellness programs designed for measurable employee wellbeing outcomes.
+    </p>
+
+  </div>
+
+</section>
+
+<section>
+
+  <div class="section-inner">
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
+
+        <h2>
+          Contact Information
+        </h2>
+
+        <div class="contact-item">
+
+          <h4>Email</h4>
+
+          <a href="mailto:souvik@soulcareworkplace.com">
+            souvik@soulcareworkplace.com
+          </a>
+
+        </div>
+
+        <div class="contact-item">
+
+          <h4>Phone</h4>
+
+          <a href="tel:+916000895051">
+            +91 6000895051
+          </a>
+
+        </div>
+
+        <div class="contact-item">
+
+          <h4>LinkedIn</h4>
+
+          <a href="https://www.linkedin.com/company/soulcare-workplace-solutions-pvt-ltd/" target="_blank">
+            SoulCare Workplace Solutions
+          </a>
+
+        </div>
+
+        <div class="contact-item">
+
+          <h4>Locations</h4>
+
+          <p>
+            Guwahati · Bangalore · Shillong
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="contact-info">
+
+        <h2>
+          Corporate Wellness Consultations
+        </h2>
+
+        <p>
+          SoulCare Workplace partners with organizations across India to deliver measurable wellness outcomes through structured employee wellbeing programs.
+        </p>
+
+        <p>
+          We support organizations with:
+        </p>
+
+        <p>
+          • Ergonomics & posture programs
+          <br><br>
+          • Mental wellness initiatives
+          <br><br>
+          • Preventive health programs
+          <br><br>
+          • Movement & fitness activation
+          <br><br>
+          • Workplace wellbeing strategy
+        </p>
+
+        <a href="mailto:souvik@soulcareworkplace.com" class="btn-primary">
+          Schedule A Consultation
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+
+      <div class="footer-logo">
+        <img src="logo.png" alt="SoulCare Workplace">
+      </div>
+
+      <p>
+        Measurable corporate wellness with structured employee wellbeing programs across India.
+      </p>
+
+    </div>
+
+    <div class="footer-contact">
+
+      <h4>Contact</h4>
+
+      <a href="mailto:souvik@soulcareworkplace.com">
+        souvik@soulcareworkplace.com
+      </a>
+
+      <a href="tel:+916000895051">
+        +91 6000895051
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+
+    <span>
+      © 2026 SoulCare Workplace Solutions Pvt. Ltd.
+    </span>
+
+    <span>
+      Guwahati · Bangalore · Shillong
+    </span>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
