@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>About SoulCare Workplace | Corporate Wellness India</title>
 
-  <meta name="description"
-    content="Learn about SoulCare Workplace and our measurable corporate wellness solutions focused on employee wellbeing, ergonomics, mental wellness, and preventive healthcare across India." />
+  <meta name="description" content="Learn about SoulCare Workplace and our measurable corporate wellness programmes focused on employee wellbeing, ergonomics, mental wellness, and preventive healthcare across India.">
 
-  <meta name="keywords"
-    content="Corporate Wellness India, Employee Wellness Programs, Workplace Wellness, Ergonomics, Mental Wellness, SoulCare Workplace" />
+  <meta name="keywords" content="corporate wellness India, employee wellness, workplace wellness, ergonomics, mental wellness, SoulCare Workplace">
 
-  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="About SoulCare Workplace">
+  <meta property="og:description" content="Structured corporate wellness solutions focused on measurable employee wellbeing outcomes across India.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
   <style>
+
+    :root {
+      --teal: #0F4C5C;
+      --teal-dark: #0A323C;
+      --teal-light: #E8F1F3;
+      --coral: #E36414;
+      --gold: #FB8B24;
+      --text: #1F2937;
+      --text-muted: #6B7280;
+      --bg: #FAFAF8;
+      --white: #FFFFFF;
+      --divider: #E5E7EB;
+    }
 
     * {
       margin: 0;
@@ -25,139 +41,286 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
-      color: #222;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      background: var(--bg);
       line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
     }
 
-    .navbar {
-      background: #0c5c75;
-      padding: 20px 50px;
-      color: white;
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      background: rgba(250,250,248,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--divider);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.6rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
-    .navbar h2 {
-      font-size: 26px;
+    .nav-logo img {
+      height: 48px;
     }
 
-    .navbar a {
-      color: white;
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
       text-decoration: none;
-      margin-left: 20px;
-      font-size: 15px;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--teal);
+    }
+
+    .nav-cta {
+      background: var(--teal);
+      color: white !important;
+      padding: 0.6rem 1.4rem;
+      border-radius: 6px;
+      font-weight: 600;
     }
 
     .hero {
-      background: linear-gradient(to right, #0c5c75, #117a9b);
-      color: white;
-      padding: 100px 20px;
-      text-align: center;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      background: var(--teal);
+      padding: 8rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(227,100,20,0.15), transparent 70%);
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
     }
 
     .hero h1 {
-      font-size: 52px;
-      margin-bottom: 20px;
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      color: white;
+      line-height: 1.1;
+      max-width: 700px;
     }
 
-    .hero p {
-      max-width: 850px;
-      margin: auto;
-      font-size: 20px;
+    .hero-sub {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.78);
+      margin-top: 1.5rem;
       line-height: 1.8;
+      max-width: 760px;
     }
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 70px 20px;
+    section {
+      padding: 6rem 2rem;
+    }
+
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--coral);
+      margin-bottom: 1rem;
     }
 
     .section-title {
-      font-size: 36px;
-      margin-bottom: 25px;
-      color: #0c5c75;
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--teal-dark);
+      line-height: 1.2;
+      max-width: 750px;
     }
 
-    .content p {
-      margin-bottom: 25px;
-      font-size: 18px;
-    }
-
-    .highlight-box {
-      background: white;
-      padding: 35px;
-      border-radius: 12px;
-      margin-top: 40px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    }
-
-    .cta-section {
-      background: #0c5c75;
-      color: white;
-      text-align: center;
-      padding: 70px 20px;
-    }
-
-    .cta-section h2 {
-      font-size: 38px;
-      margin-bottom: 20px;
-    }
-
-    .cta-section p {
+    .section-subtitle {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin-top: 1rem;
       max-width: 700px;
-      margin: auto;
-      margin-bottom: 35px;
-      font-size: 18px;
+      line-height: 1.8;
     }
 
-    .cta-button {
-      background: white;
-      color: #0c5c75;
-      text-decoration: none;
-      padding: 16px 30px;
-      border-radius: 8px;
-      font-weight: bold;
-      display: inline-block;
-      transition: 0.3s;
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-top: 3rem;
+      align-items: center;
     }
 
-    .cta-button:hover {
-      background: #e6e6e6;
+    .about-text p {
+      margin-bottom: 1.4rem;
+      color: var(--text);
+      font-size: 1rem;
     }
 
-    .footer {
-      background: #082f3d;
+    .about-highlight {
+      background: var(--teal);
+      padding: 3rem;
+      border-radius: 16px;
       color: white;
-      text-align: center;
-      padding: 25px;
-      font-size: 14px;
     }
 
-    @media (max-width: 768px) {
+    .about-highlight h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
 
-      .hero h1 {
-        font-size: 36px;
+    .about-highlight p {
+      color: rgba(255,255,255,0.8);
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    .stat-row {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .stat-item span {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.8rem;
+      display: block;
+      color: var(--gold);
+    }
+
+    .stat-item small {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.75rem;
+    }
+
+    .cta {
+      background: var(--teal-dark);
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    .cta p {
+      color: rgba(255,255,255,0.65);
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+
+    .btn-primary {
+      background: var(--coral);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    footer {
+      background: var(--teal);
+      padding: 3rem 2rem 2rem;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .footer-logo img {
+      height: 40px;
+      filter: brightness(0) invert(1);
+    }
+
+    .footer-contact h4 {
+      color: white;
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-contact a {
+      display: block;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      padding: 0.2rem 0;
+    }
+
+    .footer-contact a:hover {
+      color: var(--gold);
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 2rem auto 0;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.4);
+    }
+
+    @media (max-width: 900px) {
+
+      .about-grid {
+        grid-template-columns: 1fr;
       }
 
-      .hero p {
-        font-size: 17px;
-      }
-
-      .navbar {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .navbar div {
-        margin-top: 10px;
-      }
-
-      .section-title {
-        font-size: 28px;
+      .nav-links {
+        display: none;
       }
 
     }
@@ -168,100 +331,174 @@
 
 <body>
 
-  <nav class="navbar">
+<nav>
+  <div class="nav-inner">
 
-    <h2>SoulCare Workplace</h2>
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="SoulCare Workplace">
+    </a>
 
-    <div>
+    <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
+      <a href="contact.html" class="nav-cta">Get in Touch</a>
     </div>
 
-  </nav>
+  </div>
+</nav>
 
-  <section class="hero">
+<section class="hero">
 
-    <h1>About SoulCare Workplace</h1>
+  <div class="hero-inner">
 
-    <p>
-      Corporate wellness, measured through structured employee wellbeing
-      programs designed for modern organizations across India.
+    <div class="hero-label">
+      Corporate Wellness · Measured
+    </div>
+
+    <h1>
+      About SoulCare Workplace
+    </h1>
+
+    <p class="hero-sub">
+      Structured corporate wellness solutions focused on measurable employee wellbeing outcomes across India.
     </p>
 
-  </section>
+  </div>
 
-  <section class="container">
+</section>
 
-    <div class="content">
+<section>
 
-      <h2 class="section-title">
-        Our Mission
-      </h2>
+  <div class="section-inner">
 
-      <p>
-        SoulCare Workplace was built to help organizations move beyond generic
-        wellness activities and implement measurable, structured, and scalable
-        employee wellbeing solutions.
-      </p>
+    <div class="section-label">
+      About SoulCare
+    </div>
 
-      <p>
-        Our programs combine ergonomics, movement, mental wellness,
-        preventive healthcare, and workplace engagement into a comprehensive
-        wellness framework tailored for modern corporate environments.
-      </p>
+    <div class="section-title">
+      Building measurable workplace wellness systems for modern organizations.
+    </div>
 
-      <p>
-        We work with organizations to improve employee wellbeing,
-        productivity, engagement, and workplace culture through outcome-driven
-        wellness strategies.
-      </p>
+    <div class="section-subtitle">
+      SoulCare Workplace combines ergonomics, movement, mental wellness, and preventive healthcare into one measurable wellness ecosystem.
+    </div>
 
-      <div class="highlight-box">
+    <div class="about-grid">
 
-        <h2 class="section-title">
-          Our 4-Pillar Wellness Framework
-        </h2>
+      <div class="about-text">
 
         <p>
-          • Clinical & Ergonomics Support
-          <br><br>
-          • Movement & Physical Wellness
-          <br><br>
-          • Mental Wellness Programs
-          <br><br>
-          • Preventive Health & Lifestyle Guidance
+          Most organizations invest in wellness activities without being able to measure what actually improved.
         </p>
+
+        <p>
+          SoulCare Workplace was created to change that through structured wellness systems tied to measurable employee outcomes.
+        </p>
+
+        <p>
+          Our programs focus on employee wellbeing, ergonomics, mental wellness, movement, preventive healthcare, and workplace engagement.
+        </p>
+
+        <p>
+          Every engagement is designed to support healthier teams, better workplace culture, and long-term organizational wellbeing.
+        </p>
+
+      </div>
+
+      <div class="about-highlight">
+
+        <h3>
+          Why Measurement Matters
+        </h3>
+
+        <p>
+          Wellness becomes valuable when outcomes are measurable, scalable, and tied to real business impact.
+        </p>
+
+        <div class="stat-row">
+
+          <div class="stat-item">
+            <span>4 Pillars</span>
+            <small>Integrated wellness framework</small>
+          </div>
+
+          <div class="stat-item">
+            <span>ROI</span>
+            <small>Quantified wellness outcomes</small>
+          </div>
+
+        </div>
 
       </div>
 
     </div>
 
-  </section>
+  </div>
 
-  <section class="cta-section">
+</section>
 
-    <h2>
-      Build A Healthier Workplace
-    </h2>
+<section class="cta">
 
-    <p>
-      Partner with SoulCare Workplace to implement structured wellness
-      programs designed to improve employee wellbeing and workplace outcomes.
-    </p>
+  <h2>
+    Build A Healthier Workplace
+  </h2>
 
-    <a href="contact.html" class="cta-button">
-      Book A Consultation
-    </a>
+  <p>
+    Partner with SoulCare Workplace to implement structured wellness programs focused on measurable employee wellbeing outcomes.
+  </p>
 
-  </section>
+  <a href="contact.html" class="btn-primary">
+    Schedule A Consultation
+  </a>
 
-  <footer class="footer">
+</section>
 
-    © 2026 SoulCare Workplace. All Rights Reserved.
+<footer>
 
-  </footer>
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+
+      <div class="footer-logo">
+        <img src="logo.png" alt="SoulCare Workplace">
+      </div>
+
+      <p>
+        Measurable corporate wellness with structured employee wellbeing programs across India.
+      </p>
+
+    </div>
+
+    <div class="footer-contact">
+
+      <h4>Contact</h4>
+
+      <a href="mailto:souvik@soulcareworkplace.com">
+        souvik@soulcareworkplace.com
+      </a>
+
+      <a href="tel:+916000895051">
+        +91 6000895051
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+
+    <span>
+      © 2026 SoulCare Workplace Solutions Pvt. Ltd.
+    </span>
+
+    <span>
+      Guwahati · Bangalore · Shillong
+    </span>
+
+  </div>
+
+</footer>
 
 </body>
-
 </html>
