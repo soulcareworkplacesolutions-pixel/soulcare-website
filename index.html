@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SoulCare™ Workplace Solutions — Measurable Corporate Wellness</title>
   <link rel="canonical" href="https://www.soulcareworkplace.com/">
-  <meta name="description" content="SoulCare delivers structured, measurable employee wellness programmes with Workplace Wellbeing Index scoring and quantified ROI. Guwahati | Bengaluru | Pan-India.">
-  <meta name="keywords" content="corporate wellness, employee wellness India, Workplace Wellbeing Index, WPI, ROI wellness, Guwahati, Bengaluru, SoulCare">
+  <meta name="description" content="SoulCare delivers structured, measurable employee wellness programmes with Workplace Performance Index scoring and quantified ROI. Guwahati | Bengaluru | Pan-India.">
+  <meta name="keywords" content="corporate wellness, employee wellness India, Workplace Performance Index, WPI, ROI wellness, Guwahati, Bengaluru, SoulCare">
   <meta property="og:title" content="SoulCare — Corporate Wellness, Measured">
-  <meta property="og:description" content="Structured employee wellness with Workplace Wellbeing Index and quantified ROI for every engagement.">
+  <meta property="og:description" content="Structured employee wellness with Workplace Performance Index and quantified ROI for every engagement.">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
   <style>
     :root {
       --teal: #0F4C5C;
-      
       --teal-dark: #0A323C;
       --teal-light: #E8F1F3;
       --coral: #E36414;
@@ -33,7 +33,6 @@
     body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--bg); line-height: 1.7; -webkit-font-smoothing: antialiased; }
     .serif { font-family: 'DM Serif Display', serif; }
 
-    /* NAV */
     nav { position: fixed; top: 0; width: 100%; z-index: 100; background: rgba(250,250,248,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--divider); }
     .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0.6rem 2rem; display: flex; justify-content: space-between; align-items: center; }
     .nav-logo { text-decoration: none; display: flex; align-items: center; }
@@ -46,12 +45,10 @@
     .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
     .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--teal); margin: 5px 0; }
 
-    /* HERO */
     .hero { min-height: 100vh; display: flex; align-items: center; background: var(--teal); position: relative; overflow: hidden; padding: 8rem 2rem 4rem; }
     .hero::before { content: ''; position: absolute; top: -20%; right: -10%; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(227,100,20,0.15), transparent 70%); }
     .hero::after { content: ''; position: absolute; bottom: -30%; left: -5%; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(251,139,36,0.1), transparent 70%); }
     .hero-inner { max-width: 1200px; margin: 0 auto; width: 100%; position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-    .hero-content { }
     .hero-label { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; opacity:0; animation: fadeUp 0.6s ease 0.2s forwards; }
     .hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(2.5rem, 5vw, 4rem); color: var(--white); line-height: 1.15; opacity:0; animation: fadeUp 0.6s ease 0.4s forwards; }
     .hero h1 em { color: var(--coral); font-style: italic; }
@@ -62,28 +59,23 @@
     .btn-secondary { background: transparent; color: var(--white); padding: 0.9rem 2rem; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 0.95rem; border: 1px solid rgba(255,255,255,0.3); transition: border-color 0.2s; display: inline-block; }
     .btn-secondary:hover { border-color: var(--white); }
 
-    /* Hero image mosaic */
     .hero-mosaic { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 12px; opacity:0; animation: fadeUp 0.6s ease 1s forwards; }
     .hero-mosaic img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; }
-    .hero-mosaic img:first-child { border-radius: 12px 12px 4px 4px; }
 
     .hero-stats { grid-column: 1 / -1; display: flex; gap: 3rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); opacity:0; animation: fadeUp 0.6s ease 1.2s forwards; }
     .hero-stat-num { font-family: 'DM Serif Display', serif; font-size: 2.2rem; color: var(--gold); }
     .hero-stat-label { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 0.3rem; max-width: 140px; }
 
-    /* IMAGE STRIP */
     .image-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
     .image-strip img { width: 100%; height: 280px; object-fit: cover; transition: transform 0.4s; }
     .image-strip img:hover { transform: scale(1.03); }
 
-    /* SECTIONS */
     section { padding: 6rem 2rem; }
     .section-inner { max-width: 1200px; margin: 0 auto; }
     .section-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--coral); margin-bottom: 1rem; }
     .section-title { font-family: 'DM Serif Display', serif; font-size: clamp(2rem, 4vw, 3rem); color: var(--teal-dark); line-height: 1.2; max-width: 700px; }
     .section-subtitle { color: var(--text-muted); font-size: 1.05rem; margin-top: 1rem; max-width: 600px; line-height: 1.8; }
 
-    /* ABOUT */
     .about { background: var(--white); }
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3rem; align-items: center; }
     .about-text p { margin-bottom: 1.2rem; color: var(--text); }
@@ -95,7 +87,6 @@
     .about-highlight .stat-item span { font-family: 'DM Serif Display', serif; font-size: 1.6rem; display: block; color: var(--gold); }
     .about-highlight .stat-item small { font-size: 0.75rem; color: rgba(255,255,255,0.5); }
 
-    /* PILLARS */
     .pillars { background: var(--bg); }
     .pillars-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3rem; }
     .pillar-card { background: var(--white); border-radius: 12px; padding: 0; border-left: 4px solid transparent; transition: transform 0.3s, box-shadow 0.3s; overflow: hidden; }
@@ -110,7 +101,6 @@
     .pillar-card h3 { font-family: 'DM Serif Display', serif; font-size: 1.15rem; color: var(--teal-dark); margin-bottom: 0.6rem; }
     .pillar-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
 
-    /* WPI */
     .wpi { background: var(--teal); color: var(--white); }
     .wpi .section-label { color: var(--gold); }
     .wpi .section-title { color: var(--white); }
@@ -121,34 +111,28 @@
     .wpi-card .subtitle { color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-bottom: 1.5rem; }
     .wpi-card ul { list-style: none; }
     .wpi-card li { padding: 0.4rem 0; color: rgba(255,255,255,0.85); font-size: 0.9rem; padding-left: 1.2rem; position: relative; }
-    .wpi-card li::before { content: '→'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+    .wpi-card li::before { content: '+'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
     .wpi-note { text-align: center; margin-top: 2rem; color: rgba(255,255,255,0.5); font-size: 0.85rem; font-style: italic; }
 
-    /* SECTORS */
     .sectors { background: var(--white); }
     .sectors-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
     .sector-card { padding: 1.8rem; border: 1px solid var(--divider); border-radius: 12px; transition: border-color 0.3s; }
     .sector-card:hover { border-color: var(--teal); }
-    .sector-icon { font-size: 1.8rem; margin-bottom: 0.8rem; }
     .sector-card h3 { font-size: 1rem; font-weight: 700; color: var(--teal-dark); margin-bottom: 0.4rem; }
     .sector-card p { font-size: 0.82rem; color: var(--text-muted); }
 
-    /* TEAM */
     .team { background: var(--bg); }
     .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 3rem; }
     .team-card { text-align: center; }
-    .team-photo { width: 180px; height: 180px; border-radius: 50%; margin: 0 auto 1.2rem; object-fit: cover; border: 4px solid var(--teal-light); transition: border-color 0.3s, transform 0.3s; }
+    .team-photo { width: 180px; height: 180px; border-radius: 50%; margin: 0 auto 1.2rem; object-fit: cover; border: 4px solid var(--teal-light); transition: border-color 0.3s, transform 0.3s; display: block; }
     .team-card:hover .team-photo { border-color: var(--coral); transform: scale(1.03); }
-    .team-placeholder { width: 180px; height: 180px; border-radius: 50%; margin: 0 auto 1.2rem; background: var(--teal); display: flex; align-items: center; justify-content: center; font-family: 'DM Serif Display', serif; font-size: 3rem; color: var(--white); border: 4px solid var(--teal-light); transition: border-color 0.3s; }
-    .team-card:hover .team-placeholder { border-color: var(--coral); }
     .team-card h3 { font-family: 'DM Serif Display', serif; font-size: 1.2rem; color: var(--teal-dark); margin-bottom: 0.2rem; }
     .team-card .team-role { font-size: 0.9rem; font-weight: 600; color: var(--coral); margin-bottom: 0.3rem; }
     .team-card .team-location { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.6rem; }
-    .team-card .team-bio { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; max-width: 280px; margin: 0 auto; }
-    .team-card a { color: var(--teal); text-decoration: none; font-size: 0.82rem; font-weight: 600; }
+    .team-card .team-bio { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; max-width: 280px; margin: 0 auto 0.6rem; }
+    .team-card a { display: inline-block; margin: 0.2rem 0.3rem; color: var(--teal); text-decoration: none; font-size: 0.82rem; font-weight: 600; }
     .team-card a:hover { color: var(--coral); }
 
-    /* PRICING */
     .pricing { background: var(--white); }
     .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
     .price-card { background: var(--bg); border-radius: 12px; padding: 2.5rem 2rem; border: 1px solid var(--divider); transition: transform 0.3s, box-shadow 0.3s; position: relative; }
@@ -163,29 +147,24 @@
     .price-card .price-note { font-size: 0.75rem; opacity: 0.5; margin-bottom: 1.5rem; }
     .price-card .price-features { list-style: none; }
     .price-card .price-features li { padding: 0.35rem 0; font-size: 0.85rem; padding-left: 1.4rem; position: relative; }
-    .price-card .price-features li::before { content: '✓'; position: absolute; left: 0; font-weight: 700; color: var(--coral); }
+    .price-card .price-features li::before { content: '+'; position: absolute; left: 0; font-weight: 700; color: var(--coral); }
     .price-card.featured .price-features li::before { color: var(--gold); }
     .pricing-note { text-align: center; margin-top: 2rem; font-size: 0.85rem; color: var(--text-muted); font-style: italic; }
 
-    /* COMPLIANCE */
     .compliance { background: var(--bg); }
     .compliance-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3rem; }
     .compliance-item { text-align: center; padding: 2rem 1rem; }
-    .compliance-item .icon { width: 56px; height: 56px; border-radius: 50%; background: var(--teal-light); margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; }
+    .compliance-item .icon { width: 56px; height: 56px; border-radius: 50%; background: var(--teal-light); margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 700; color: var(--teal); letter-spacing: 0.05em; }
     .compliance-item h4 { font-size: 0.9rem; color: var(--teal-dark); margin-bottom: 0.4rem; }
     .compliance-item p { font-size: 0.78rem; color: var(--text-muted); }
 
-    /* CTA */
     .cta { background: var(--teal-dark); padding: 5rem 2rem; text-align: center; }
     .cta h2 { font-family: 'DM Serif Display', serif; font-size: clamp(2rem, 4vw, 3rem); color: var(--white); margin-bottom: 1rem; }
-    .cta p { color: rgba(255,255,255,0.6); max-width: 500px; margin: 0 auto 2rem; }
-    .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .cta p.cta-sub { color: rgba(255,255,255,0.6); max-width: 500px; margin: 0 auto 1rem; }
+    .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
 
-    /* FOOTER */
     footer { background: var(--teal); padding: 3rem 2rem 2rem; color: rgba(255,255,255,0.7); }
     .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 2rem; }
-    .footer-brand .footer-logo { margin-bottom: 0.8rem; }
-    .footer-brand .footer-logo img { height: 40px; width: auto; filter: brightness(0) invert(1); }
     .footer-brand p { font-size: 0.82rem; max-width: 280px; }
     .footer-contact h4 { color: var(--white); font-size: 0.85rem; margin-bottom: 0.8rem; }
     .footer-contact a { display: block; color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.85rem; padding: 0.2rem 0; transition: color 0.2s; }
@@ -226,17 +205,20 @@
   </style>
 </head>
 <body>
+
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a href="#" class="nav-logo"><img src="logo.png" alt="SoulCare Workplace Solutions"></a>
+    <a href="#" class="nav-logo">
+      <img src="https://www.soulcareworkplace.com/logo.png" alt="SoulCare Workplace Solutions">
+    </a>
     <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#pillars">Framework</a>
-      <a href="#wpi">WPI & ROI</a>
+      <a href="#wpi">WPI &amp; ROI</a>
       <a href="#team">Team</a>
       <a href="#partners">Partners</a>
       <a href="/webinars">Webinars</a>
@@ -252,7 +234,7 @@
     <div class="hero-content">
       <div class="hero-label">Corporate Wellness · Measured</div>
       <h1>SoulCare™ — Corporate Wellness,<br><em>Measured.</em></h1>
-      <p class="hero-sub">Structured corporate wellness programmes with measurable Workplace Wellbeing Index scoring, quantified business ROI, ergonomics, mental wellness, movement, and preventive healthcare solutions across India.</p>
+      <p class="hero-sub">Structured corporate wellness programmes with measurable Workplace Performance Index scoring, quantified business ROI, ergonomics, mental wellness, movement, and preventive healthcare solutions across India.</p>
       <div class="hero-actions">
         <a href="#contact" class="btn-primary">Schedule a Conversation</a>
         <a href="#pillars" class="btn-secondary">See the Framework</a>
@@ -271,7 +253,7 @@
       </div>
       <div>
         <div class="hero-stat-num">WPI</div>
-        <div class="hero-stat-label">Workplace Wellbeing Index — scored 0 to 100</div>
+        <div class="hero-stat-label">Workplace Performance Index — scored 0 to 100</div>
       </div>
       <div>
         <div class="hero-stat-num">ROI</div>
@@ -293,20 +275,20 @@
 <section class="about" id="about">
   <div class="section-inner">
     <div class="section-label">About SoulCare</div>
-    <div class="section-title serif">The problem isn't wellness spend.<br>It's <em>unmeasured</em> wellness spend.</div>
+    <div class="section-title serif">The problem is not wellness spend.<br>It is <em>unmeasured</em> wellness spend.</div>
     <div class="about-grid fade-in">
       <div class="about-text">
         <p>Most Indian employers spend meaningfully on employee wellness — health camps, insurance top-ups, occasional yoga sessions, one-off webinars. Almost none can prove what that spend actually changed.</p>
         <p><strong>SoulCare Workplace Solutions</strong> was built on one observation: corporate wellness in India is activity-driven, not outcome-driven. We built a system that changes that.</p>
-        <p>Every SoulCare engagement produces a <strong>Workplace Wellbeing Index (WPI)</strong> score at baseline, monthly, and conclusion — along with a quantified Return on Investment figure in rupees. Not participation rates. Not survey satisfaction. Actual measurable health outcomes tied to actual business value.</p>
-        <p>We are a private limited company headquartered in Guwahati, Assam, with operations in Bengaluru and expanding across India.</p>
+        <p>Every SoulCare engagement produces a <strong>Workplace Performance Index (WPI)</strong> score at baseline, monthly, and conclusion, along with a quantified Return on Investment figure in rupees. Not participation rates. Not survey satisfaction. Actual measurable health outcomes tied to actual business value.</p>
+        <p>We are a private limited company headquartered in Guwahati, Assam, with operations in BENGALURU and expanding across India.</p>
       </div>
       <div class="about-highlight">
         <h3 class="serif">Why measurement changes everything</h3>
         <p>When wellness is measured, it stops being a cost centre and starts being an investment. The HR head can defend it. The CFO can verify it. The employee can feel it. And the renewal rate reflects it.</p>
         <div class="stat-row">
           <div class="stat-item">
-            <span>4–6×</span>
+            <span>4 to 6x</span>
             <small>Typical ROI over 12 months (industry benchmarks)</small>
           </div>
           <div class="stat-item">
@@ -319,7 +301,7 @@
   </div>
 </section>
 
-<!-- PILLARS with images -->
+<!-- PILLARS -->
 <section class="pillars" id="pillars">
   <div class="section-inner">
     <div class="section-label">The Framework</div>
@@ -330,7 +312,7 @@
         <img class="pillar-img" src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&h=300&fit=crop" alt="Physiotherapy and ergonomic assessment">
         <div class="pillar-body">
           <div class="pillar-num">PILLAR 01</div>
-          <h3 class="serif">Clinical & Pain Management</h3>
+          <h3 class="serif">Clinical and Pain Management</h3>
           <p>Ergonomic audits, physiotherapy, posture correction, rehabilitation protocols. Addressing the desk-pain epidemic.</p>
         </div>
       </div>
@@ -338,7 +320,7 @@
         <img class="pillar-img" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=300&fit=crop" alt="Corporate fitness and movement training">
         <div class="pillar-body">
           <div class="pillar-num">PILLAR 02</div>
-          <h3 class="serif">Movement & Performance</h3>
+          <h3 class="serif">Movement and Performance</h3>
           <p>Mobility drills, desk-break routines, strength training, fitness activation. Reversing sedentary damage.</p>
         </div>
       </div>
@@ -346,7 +328,7 @@
         <img class="pillar-img" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&h=300&fit=crop" alt="Corporate yoga and mindfulness practice">
         <div class="pillar-body">
           <div class="pillar-num">PILLAR 03</div>
-          <h3 class="serif">Mental Wellness & Stress</h3>
+          <h3 class="serif">Mental Wellness and Stress</h3>
           <p>Stress workshops, breathwork, mindfulness practices, focus training. Addressing the burnout epidemic.</p>
         </div>
       </div>
@@ -354,7 +336,7 @@
         <img class="pillar-img" src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=500&h=300&fit=crop" alt="Healthy nutrition and lifestyle guidance">
         <div class="pillar-body">
           <div class="pillar-num">PILLAR 04</div>
-          <h3 class="serif">Lifestyle & Preventive Health</h3>
+          <h3 class="serif">Lifestyle and Preventive Health</h3>
           <p>Nutrition guidance, sleep education, habit-building, preventive care. The daily choices that compound.</p>
         </div>
       </div>
@@ -367,15 +349,15 @@
   <div class="section-inner">
     <div class="section-label">What Makes Us Different</div>
     <div class="section-title serif">We measure. Then we measure again.</div>
-    <div class="section-subtitle">Every engagement produces a client-ready report with quantified outcomes — not just activity logs.</div>
+    <div class="section-subtitle">Every engagement produces a client-ready report with quantified outcomes, not just activity logs.</div>
     <div class="wpi-grid fade-in">
       <div class="wpi-card">
-        <h3 class="serif">Workplace Wellbeing Index</h3>
-        <div class="subtitle">Scored 0–100 · Measured at baseline, monthly, and final</div>
+        <h3 class="serif">Workplace Performance Index</h3>
+        <div class="subtitle">Scored 0 to 100 — Measured at baseline, monthly, and final</div>
         <ul>
           <li>Pain sub-index (Clinical pillar)</li>
           <li>Stress sub-index (Mental pillar)</li>
-          <li>Energy & movement sub-index</li>
+          <li>Energy and movement sub-index</li>
           <li>Lifestyle sub-index</li>
           <li>Composite WPI score tracked over time</li>
         </ul>
@@ -384,15 +366,15 @@
         <h3 class="serif">Quantified ROI</h3>
         <div class="subtitle">In rupees — a number the CFO can verify</div>
         <ul>
-          <li>Absenteeism days saved × cost-to-company</li>
-          <li>Productivity uplift × workforce value</li>
+          <li>Absenteeism days saved x cost-to-company</li>
+          <li>Productivity uplift x workforce value</li>
           <li>Programme cost as the denominator</li>
           <li>ROI multiple calculated and reported</li>
           <li>Board-ready final report at programme end</li>
         </ul>
       </div>
     </div>
-    <div class="wpi-note">Industry benchmarks suggest 4–6× ROI on well-structured wellness programmes over 12 months. We measure and report the actual number for every engagement.</div>
+    <div class="wpi-note">Industry benchmarks suggest 4 to 6x ROI on well-structured wellness programmes over 12 months. We measure and report the actual number for every engagement.</div>
   </div>
 </section>
 
@@ -403,12 +385,12 @@
     <div class="section-title serif">Built for India's hardest-working sectors.</div>
     <div class="section-subtitle">Wherever workforces are large, shifts are long, and measurable outcomes matter.</div>
     <div class="sectors-grid fade-in">
-      <div class="sector-card"><div class="sector-icon">🏭</div><h3>PSUs & Energy</h3><p>Refineries, power, oil & gas — shift-based, field-posted workforces.</p></div>
-      <div class="sector-card"><div class="sector-icon">🏥</div><h3>Healthcare</h3><p>Hospitals and medical colleges — frontline burnout, clinical staff.</p></div>
-      <div class="sector-card"><div class="sector-icon">🎓</div><h3>Education</h3><p>IIMs, universities — faculty stress, non-teaching staff health.</p></div>
-      <div class="sector-card"><div class="sector-icon">🏦</div><h3>Banking & Finance</h3><p>Banks — desk-bound staff, branch attrition, customer-facing pressure.</p></div>
-      <div class="sector-card"><div class="sector-icon">💻</div><h3>IT & ITES</h3><p>Software, BPO — sedentary work, deadline pressure, burnout.</p></div>
-      <div class="sector-card"><div class="sector-icon">🏛️</div><h3>Government & Civic</h3><p>Municipal bodies, state agencies — public service staff welfare.</p></div>
+      <div class="sector-card"><h3>PSUs and Energy</h3><p>Refineries, power, oil and gas — shift-based, field-posted workforces.</p></div>
+      <div class="sector-card"><h3>Healthcare</h3><p>Hospitals and medical colleges — frontline burnout, clinical staff.</p></div>
+      <div class="sector-card"><h3>Education</h3><p>IIMs, universities — faculty stress, non-teaching staff health.</p></div>
+      <div class="sector-card"><h3>Banking and Finance</h3><p>Banks — desk-bound staff, branch attrition, customer-facing pressure.</p></div>
+      <div class="sector-card"><h3>IT and ITES</h3><p>Software, BPO — sedentary work, deadline pressure, burnout.</p></div>
+      <div class="sector-card"><h3>Government and Civic</h3><p>Municipal bodies, state agencies — public service staff welfare.</p></div>
     </div>
   </div>
 </section>
@@ -422,157 +404,87 @@
     <div class="team-grid fade-in">
 
       <div class="team-card">
-        <img src="team/souvik.png" alt="Souvik De" class="team-photo" style="object-position: center top;">
+        <img src="https://www.soulcareworkplace.com/team/souvik.png" alt="Souvik De" class="team-photo" style="object-position: center top;">
         <h3 class="serif">Souvik De</h3>
-        <div class="team-role">Founder & Director</div>
-        <div class="team-location">📍 Guwahati (HQ) · Hybrid</div>
-        <p class="team-bio">Founder of SoulCare Workplace Solutions. Bringing 14+ years of leadership experience in corporate wellness, business development, and operations across India and the Middle East.</p>
-        <a href="/souvik-de">View Founder Profile →</a>
-        <a href="https://www.linkedin.com/in/souvikde1980/" target="_blank" rel="noopener">LinkedIn →</a>
+        <div class="team-role">Founder and Director</div>
+        <div class="team-location">Guwahati & Bengaluru · Hybrid</div>
+        <p class="team-bio">Founder of SoulCare Workplace Solutions. Bringing 16+ years of leadership experience in corporate wellness, business development, and operations across India and the Middle East.</p>
+        <a href="/souvik-de">View Profile</a>
       </div>
 
       <div class="team-card">
-        <img src="team/chandrima.png" alt="Chandrima Bhattacharjee" class="team-photo" style="object-position: center top;">
-        <h3 class="serif">Chandrima B</h3>
-        <div class="team-role">City Lead — Bengaluru East & North</div>
-        <div class="team-location">📍 Bengaluru, Karnataka</div>
-        <p class="team-bio">Corporate transformation expert. Former gym centre head at Tech Mahindra and centre manager at Cisco. Certified personal trainer, S&C coach, sports nutritionist.</p>
-        <a href="https://www.linkedin.com/in/chandrima-c-6587951a7/" target="_blank">LinkedIn →</a>
-      </div>
-
-      <div class="team-card">
-        <img src="team/vikram.jpeg" alt="Vikram Fatehpuria" class="team-photo" style="object-position: center top;">
+        <img src="https://www.soulcareworkplace.com/team/vikram.jpeg" alt="Vikram Fatehpuria" class="team-photo" style="object-position: center top;">
         <h3 class="serif">Vikram Fatehpuria</h3>
-        <div class="team-role">City Lead — Mumbai & Pune</div>
-        <div class="team-location">📍 Mumbai & Pune, Maharashtra</div>
+        <div class="team-role">City Lead — Mumbai and Pune</div>
+        <div class="team-location">Mumbai and Pune, Maharashtra</div>
         <p class="team-bio">Certified personal trainer and equity analyst driving SoulCare's presence across the Mumbai and Pune corporate markets. Experienced fitness and wellness professional.</p>
-        <a href="https://www.linkedin.com/in/vikram-fatehpuria-871983100/" target="_blank">LinkedIn →</a>
       </div>
 
       <div class="team-card">
-        <img src="team/Dr_Shristi.jpeg" alt="Dr. Srishti Agarwal" class="team-photo" style="object-position: center top;">
+        <img src="https://www.soulcareworkplace.com/team/Dr_Shristi.jpeg" alt="Dr. Srishti Agarwal" class="team-photo" style="object-position: center top;">
         <h3 class="serif">Dr. Srishti Agarwal</h3>
-        <div class="team-role">Lifestyle & Nutrition Specialist — Bengaluru</div>
-        <div class="team-location">📍 Bengaluru, Karnataka</div>
-        <p class="team-bio">PhD in Nutrition Science with corporate wellness experience. Translates evidence-based nutrition and lifestyle principles into sustainable daily habits. Leads Pillar 4 — Lifestyle & Nutrition for Bengaluru.</p>
+        <div class="team-role">Lifestyle and Nutrition Specialist</div>
+        <div class="team-location">BENGALURU, Karnataka</div>
+        <p class="team-bio">PhD in Nutrition Science with corporate wellness experience. Translates evidence-based nutrition and lifestyle principles into sustainable daily habits. Leads Pillar 4 for BENGALURU.</p>
       </div>
 
       <div class="team-card">
-        <img src="team/mousumi.png" alt="Mousumi Prusty" class="team-photo" style="object-position: center top;">
+        <img src="https://www.soulcareworkplace.com/team/mousumi.png" alt="Mousumi Prusty" class="team-photo" style="object-position: center top;">
         <h3 class="serif">Mousumi Prusty</h3>
-        <div class="team-role">City Lead — Kolkata & Bhubaneswar</div>
-        <div class="team-location">📍 Kolkata, West Bengal</div>
-        <p class="team-bio">Entrepreneur with experience in health supplements and fitness. Running her own fitness academy since 2025, bringing grassroots wellness expertise to SoulCare's Kolkata and Bhubaneswar territory.</p>
+        <div class="team-role">City Lead — Kolkata and Bhubaneswar</div>
+        <div class="team-location">Kolkata, West Bengal</div>
+        <p class="team-bio">Entrepreneur with experience in health supplements and fitness. Running her own fitness academy since 2025, bringing grassroots wellness expertise to SoulCare's Kolkata territory.</p>
       </div>
 
       <div class="team-card">
-        <img src="team/arghajit.png" alt="Arghajit Dutta" class="team-photo" style="object-position: center top;">
+        <img src="https://www.soulcareworkplace.com/team/arghajit.png" alt="Arghajit Dutta" class="team-photo" style="object-position: center top;">
         <h3 class="serif">Arghajit Dutta</h3>
         <div class="team-role">City Lead — Meghalaya</div>
-        <div class="team-location">📍 Shillong, Meghalaya</div>
-        <p class="team-bio">On-ground operations and client relationships across the Northeast. Managing the Meghalaya territory — institutions, banks, and government bodies.</p>
-        <a href="https://www.linkedin.com/in/arghajit-dutta/" target="_blank">LinkedIn →</a>
-      </div>
-
-      <div class="team-card">
-        <img src="team/luqman.png" alt="Syed Luqman" class="team-photo" style="object-position: center top;">
-        <h3 class="serif">Syed Luqman</h3>
-        <div class="team-role">City Lead — Bengaluru West & South</div>
-        <div class="team-location">📍 Bengaluru, Karnataka</div>
-        <p class="team-bio">Sales and business development professional driving SoulCare's presence across South and West Bengaluru's corporate corridor.</p>
-        <a href="https://www.linkedin.com/in/syed-luqman-903b622b8/" target="_blank">LinkedIn →</a>
+        <div class="team-location">Shillong, Meghalaya</div>
+        <p class="team-bio">On-ground operations and client relationships across the Northeast. Managing the Meghalaya territory across institutions, banks, and government bodies.</p>
       </div>
 
     </div>
   </div>
 </section>
+
 <!-- PARTNERS -->
 <section class="partners" id="partners" style="background: var(--teal); padding: 4rem 2rem;">
   <div class="section-inner">
-
     <div style="display:flex; justify-content:space-between; align-items:center; gap:60px; flex-wrap:wrap;">
-
-      <!-- LEFT SIDE -->
       <div style="flex:1; min-width:350px;">
-
-        <div class="section-label" style="color: var(--gold);">
-          Certified Partnership
-        </div>
-
-        <div class="section-title serif" style="color: var(--white);">
-          SoulCare × Fit Place To Work
-        </div>
-
+        <div class="section-label" style="color: var(--gold);">Certified Partnership</div>
+        <div class="section-title serif" style="color: var(--white);">SoulCare x Fit Place To Work</div>
         <div style="margin-top:1rem; max-width:650px; color:rgba(255,255,255,0.75); font-size:1.05rem; line-height:1.8;">
-          We are the official wellness delivery partner for Fit Place To Work — India's Gold Standard in Employee Wellness Certification. Companies that complete a SoulCare programme and achieve their Workplace Wellbeing Index target earn the Fit Place To Work certification.
+          We are the official wellness delivery partner for Fit Place To Work — India's Gold Standard in Employee Wellness Certification. Companies that complete a SoulCare programme and achieve their Workplace Performance Index target earn the Fit Place To Work certification.
         </div>
-
-        <!-- CERTIFICATION LEVELS -->
         <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-top:2.5rem; max-width:700px;">
-
           <div style="background:rgba(255,255,255,0.08); border-radius:12px; padding:1.5rem; text-align:center;">
-            <div style="font-size:1.8rem; margin-bottom:0.5rem;">🥈</div>
-            <div style="font-weight:700; color:var(--white);">Silver</div>
-            <div style="font-size:0.8rem; color:rgba(255,255,255,0.6); margin-top:0.3rem;">
-              3-Month · WPI 75+
-            </div>
+            <div style="font-weight:700; color:var(--white); font-size:1rem; margin-bottom:0.4rem;">Silver</div>
+            <div style="font-size:0.8rem; color:rgba(255,255,255,0.6);">3-Month · WPI 75+</div>
           </div>
-
           <div style="background:rgba(255,255,255,0.08); border-radius:12px; padding:1.5rem; text-align:center;">
-            <div style="font-size:1.8rem; margin-bottom:0.5rem;">🥇</div>
-            <div style="font-weight:700; color:var(--gold);">Gold</div>
-            <div style="font-size:0.8rem; color:rgba(255,255,255,0.6); margin-top:0.3rem;">
-              6-Month · WPI 85+
-            </div>
+            <div style="font-weight:700; color:var(--gold); font-size:1rem; margin-bottom:0.4rem;">Gold</div>
+            <div style="font-size:0.8rem; color:rgba(255,255,255,0.6);">6-Month · WPI 85+</div>
           </div>
-
           <div style="background:rgba(255,255,255,0.08); border-radius:12px; padding:1.5rem; text-align:center;">
-            <div style="font-size:1.8rem; margin-bottom:0.5rem;">🏆</div>
-            <div style="font-weight:700; color:var(--white);">Platinum</div>
-            <div style="font-size:0.8rem; color:rgba(255,255,255,0.6); margin-top:0.3rem;">
-              12-Month · WPI 90+
-            </div>
+            <div style="font-weight:700; color:var(--white); font-size:1rem; margin-bottom:0.4rem;">Platinum</div>
+            <div style="font-size:0.8rem; color:rgba(255,255,255,0.6);">12-Month · WPI 90+</div>
           </div>
-
         </div>
-
         <div style="margin-top:2rem; display:flex; align-items:center; gap:1.5rem; flex-wrap:wrap;">
-          <a href="https://www.linkedin.com/company/fitplacetowork/" target="_blank" style="color:var(--gold); font-weight:600; text-decoration:none;">
-            Fit Place To Work →
-          </a>
-
+          <a href="https://www.linkedin.com/company/fitplacetowork/" target="_blank" style="color:var(--gold); font-weight:600; text-decoration:none;">Fit Place To Work</a>
           <span style="color:rgba(255,255,255,0.3);">|</span>
-
-          <span style="color:rgba(255,255,255,0.6); font-size:0.85rem; font-style:italic;">
-            Silver & Gold certification complimentary for the first 5 companies
-          </span>
+          <span style="color:rgba(255,255,255,0.6); font-size:0.85rem; font-style:italic;">Silver and Gold certification complimentary for the first 5 companies</span>
         </div>
-
       </div>
-
-      <!-- RIGHT SIDE CERTIFICATE -->
       <div style="flex:0 0 380px; text-align:center;">
-
-        <img
-          src="team/fitplace-certificate-frame.png"
-          alt="Fit Place To Work Certification"
-          style="
-            width:100%;
-            max-width:380px;
-            border-radius:18px;
-            box-shadow:0 20px 50px rgba(0,0,0,0.35);
-          "
-        >
-
+        <img src="https://www.soulcareworkplace.com/team/fitplace-certificate-frame.png" alt="Fit Place To Work Certification" style="width:100%; max-width:380px; border-radius:18px; box-shadow:0 20px 50px rgba(0,0,0,0.35);">
       </div>
-
-    </div>
-
-  </div>
-</section>
     </div>
   </div>
 </section>
+
 <!-- PRICING -->
 <section class="pricing" id="pricing">
   <div class="section-inner">
@@ -583,7 +495,7 @@
       <div class="price-card">
         <h3 class="serif">1-Day Wellness Event</h3>
         <div class="price-desc">4 hours · All 4 pillars sampled</div>
-        <div class="price-amount">From <span>Rs.450</span></div>
+        <div class="price-amount">From <span>Rs. 450</span></div>
         <div class="price-note">per employee</div>
         <ul class="price-features">
           <li>All 4 pillars sampled</li>
@@ -596,7 +508,7 @@
         <div class="price-badge">MOST POPULAR</div>
         <h3 class="serif">3-Month Programme</h3>
         <div class="price-desc">Full 4 pillars · WPI + ROI report</div>
-        <div class="price-amount">From <span>Rs.1,500</span></div>
+        <div class="price-amount">From <span>Rs. 1,500</span></div>
         <div class="price-note">per employee · 12 weeks</div>
         <ul class="price-features">
           <li>Baseline WPI assessment</li>
@@ -609,7 +521,7 @@
       <div class="price-card">
         <h3 class="serif">12-Month Programme</h3>
         <div class="price-desc">Annual · Board-grade · CSR-eligible</div>
-        <div class="price-amount">From <span>Rs.5,000</span></div>
+        <div class="price-amount">From <span>Rs. 5,000</span></div>
         <div class="price-note">per employee · full year</div>
         <ul class="price-features">
           <li>Everything in 3-month</li>
@@ -626,39 +538,27 @@
 <!-- COMPLIANCE -->
 <section class="compliance">
   <div class="section-inner">
-    <div class="section-label">Trust & Compliance</div>
+    <div class="section-label">Trust and Compliance</div>
     <div class="section-title serif">Built for institutional buyers.</div>
     <div class="compliance-grid fade-in">
-      <div class="compliance-item"><div class="icon">🛡️</div><h4>DPDP Act 2023</h4><p>Full compliance. Consented, encrypted, minimised.</p></div>
-      <div class="compliance-item"><div class="icon">📋</div><h4>Registered Pvt Ltd</h4><p>Incorporated with full contractual standing.</p></div>
-      <div class="compliance-item"><div class="icon">🔒</div><h4>Confidential by Default</h4><p>Aggregate-only reporting. Individual data stays private.</p></div>
-      <div class="compliance-item"><div class="icon">✅</div><h4>Vetted Specialists</h4><p>Verified credentials, enforced brand standards.</p></div>
+      <div class="compliance-item"><div class="icon">DPDP</div><h4>DPDP Act 2023</h4><p>Full compliance. Consented, encrypted, minimised.</p></div>
+      <div class="compliance-item"><div class="icon">PVT</div><h4>Registered Pvt Ltd</h4><p>Incorporated with full contractual standing.</p></div>
+      <div class="compliance-item"><div class="icon">CONF</div><h4>Confidential by Default</h4><p>Aggregate-only reporting. Individual data stays private.</p></div>
+      <div class="compliance-item"><div class="icon">VET</div><h4>Vetted Specialists</h4><p>Verified credentials, enforced brand standards.</p></div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
+<!-- CTA / CONTACT -->
 <section class="cta" id="contact">
   <h2 class="serif">Let's pilot one.</h2>
-  <p>A 3-month engagement, scoped to your workforce, delivering a final ROI number your leadership can verify.</p>
-  <div class="cta-actions">
-    <div style="margin: 2rem 0;">
-  <p style="font-size: 1rem; margin-bottom: 1rem;">
-    Book a complimentary 30-minute Wellness Audit — 
-    no commitment, no invoice.
-  </p>
-  <div 
-    class="calendly-inline-widget" 
-    data-url="https://calendly.com/soulcareworkplacesolutions/30min" 
-    style="min-width:320px;height:700px;">
+  <p class="cta-sub">A 3-month engagement, scoped to your workforce, delivering a final ROI number your leadership can verify.</p>
+  <p style="color:rgba(255,255,255,0.5); font-size:0.9rem; margin-bottom: 1.5rem;">Book a complimentary 30-minute Wellness Audit below. No commitment, no invoice.</p>
+  <div style="max-width:900px; margin: 0 auto 2rem;">
+    <div class="calendly-inline-widget" data-url="https://calendly.com/soulcareworkplacesolutions/30min" style="min-width:320px; height:700px;"></div>
   </div>
-  <script 
-    type="text/javascript" 
-    src="https://assets.calendly.com/assets/external/widget.js" 
-    async>
-  </script>
-</div>
-    <a href="mailto:city.lead@soulcareworkplace.com" class="btn-primary">city.lead@soulcareworkplace.com</a>
+  <div class="cta-actions">
+    <a href="mailto:hello@soulcareworkplace.com" class="btn-primary">hello@soulcareworkplace.com</a>
     <a href="https://wa.me/916000895051" class="btn-secondary" target="_blank">WhatsApp</a>
   </div>
 </section>
@@ -667,23 +567,28 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <p>Measurable corporate wellness with Workplace Wellbeing Index scoring and quantified ROI for every engagement.</p>
+      <p>Measurable corporate wellness with Workplace Performance Index scoring and quantified ROI for every engagement.</p>
     </div>
     <div class="footer-contact">
       <h4>Contact</h4>
-      <a href="mailto:souvik@soulcareworkplace.com">souvik@soulcareworkplace.com</a>
+      <a href="mailto:hello@soulcareworkplace.com">hello@soulcareworkplace.com</a>
       <a href="tel:+916000895051">+91 6000895051</a>
-      <a href="https://www.linkedin.com/in/souvikde1980/" target="_blank">LinkedIn — Souvik De</a>
-      <a href="https://www.linkedin.com/company/soulcare-workplace-solutions-pvt-ltd/" target="_blank">LinkedIn — SoulCare</a>
     </div>
     <div class="footer-contact">
-      <h4>Locations</h4>      
+      <h4>Follow Us</h4>
+      <a href="https://www.linkedin.com/company/soulcare-workplace-solutions-pvt-ltd/" target="_blank">LinkedIn — SoulCare</a>
+      <a href="https://www.instagram.com/soulcareworkplace/" target="_blank">Instagram — SoulCare</a>
+    </div>
+    <div class="footer-contact">
+      <h4>Locations</h4>
       <a href="#">Guwahati, Assam (HQ)</a>
       <a href="#">Bengaluru, Karnataka</a>
       <a href="#">Shillong, Meghalaya</a>
+      <a href="#">Chandigarh, Punjab</a>
       <a href="#">Mumbai, Maharashtra</a>
       <a href="#">Pune, Maharashtra</a>
       <a href="#">Kolkata, West Bengal</a>
+      <a href="#">Bhubaneswar, Odisha</a>
     </div>
   </div>
   <div class="footer-bottom">
