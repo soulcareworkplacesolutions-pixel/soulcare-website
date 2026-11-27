@@ -147,6 +147,31 @@
     .wpi-card ul { list-style: none; }
     .wpi-card li { padding: 0.4rem 0; color: rgba(255,255,255,0.85); font-size: 0.9rem; padding-left: 1.2rem; position: relative; }
     .wpi-card li::before { content: '+'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+
+    .pillar-graphic { display: flex; flex-wrap: wrap; align-content: center; justify-content: center; gap: 8px; padding: 1rem; background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%); }
+    .pillar-graphic span { color: var(--white); border: 1px solid rgba(255,255,255,0.35); border-radius: 999px; padding: 0.3rem 0.8rem; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.02em; }
+    .wpi-sample { margin-top: 2rem; background: var(--white); color: var(--text, #1a2b30); border-radius: 12px; padding: 2rem 2.5rem; }
+    .wpi-sample-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1rem; }
+    .wpi-sample-head h3 { font-size: 1.5rem; color: var(--teal); }
+    .wpi-sample-tag { display: inline-block; background: #FDEBDD; color: #9A3D06; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; padding: 0.25rem 0.7rem; border-radius: 999px; margin-bottom: 0.5rem; }
+    .wpi-composite { text-align: right; }
+    .wpi-composite-label { font-size: 0.8rem; color: #5b6b70; }
+    .wpi-composite-num { font-family: 'DM Serif Display', serif; font-size: 2rem; color: var(--teal); }
+    .wpi-composite-num span { font-family: inherit; font-size: 1rem; color: #5b6b70; }
+    .wpi-legend { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: #5b6b70; margin-bottom: 1rem; }
+    .wpi-legend .lg { display: inline-block; width: 14px; height: 10px; border-radius: 2px; margin-left: 0.6rem; }
+    .wpi-legend .lg:first-child { margin-left: 0; }
+    .lg.base, .wpi-bar.base { background: #C9D6D9; }
+    .lg.end, .wpi-bar.end { background: var(--coral, #E36414); }
+    .wpi-row { display: grid; grid-template-columns: 180px 1fr; gap: 1rem; align-items: center; padding: 0.45rem 0; border-top: 1px solid #EEF2F3; }
+    .wpi-row-label { font-size: 0.9rem; font-weight: 600; color: #1a2b30; }
+    .wpi-bars { display: flex; flex-direction: column; gap: 4px; }
+    .wpi-bar { height: 16px; border-radius: 3px; position: relative; min-width: 2rem; }
+    .wpi-bar span { position: absolute; right: 6px; top: 50%; transform: translateY(-50%); font-size: 0.72rem; font-weight: 700; color: #1a2b30; }
+    .wpi-bar.end span { color: var(--white); }
+    .wpi-sample-note { margin-top: 1rem; font-size: 0.8rem; color: #5b6b70; font-style: italic; }
+    .footer-city { display: block; color: rgba(255,255,255,0.7); font-size: 0.85rem; padding: 0.2rem 0; }
+    @media (max-width: 640px) { .wpi-sample { padding: 1.5rem 1.2rem; } .wpi-row { grid-template-columns: 1fr; gap: 0.3rem; } .wpi-composite { text-align: left; } }
     .wpi-note { text-align: center; margin-top: 2rem; color: rgba(255,255,255,0.5); font-size: 0.85rem; font-style: italic; }
 
     .sectors { background: var(--white); }
@@ -292,7 +317,7 @@
     .pillar-card p, .wpi-card .subtitle, .wpi-note, .sector-card p, .pricing-note,
     .team-card .team-location, .team-card .team-bio, .team-card a,
     .price-card .price-desc, .price-card .price-features li, .compliance-item p,
-    .footer-brand p, .footer-contact a { font-size: 1rem; line-height: 1.6; }
+    .footer-brand p, .footer-contact a, .footer-city { font-size: 1rem; line-height: 1.6; }
     .wpi-card li, .team-card .team-role, .compliance-item h4 { font-size: 1rem; }
     @media (max-width: 600px) { body { font-size: 17px; } }
     .trust-strip { background: var(--teal-light); border-bottom: 1px solid var(--divider); padding: 1.1rem 2rem; }
@@ -317,15 +342,11 @@
     </button>
     <div class="nav-links">
       <a href="#about">About</a>
-      <a href="#pillars">Framework</a>
-      <a href="#wpi">WPI &amp; ROI</a>
-      <a href="#team">Team</a>
-      <a href="/blog">Blog</a>
-      <a href="/tarundeep-kaur">Workshops</a>
-      <a href="/webinars">Webinars</a>
+      <a href="#wpi">WPI</a>
+      <a href="#pricing">Programmes</a>
       <a href="/executive-reset" class="nav-event">Executive Reset</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#contact" class="nav-cta">Get in Touch</a>
+      <a href="/blog">Blog</a>
+      <a href="#contact" class="nav-cta">Book a Call</a>
     </div>
   </div>
 </nav>
@@ -343,10 +364,10 @@
       </div>
     </div>
     <div class="hero-mosaic">
-      <img width="600" height="400" decoding="async" src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop" alt="Corporate wellness session">
-      <img width="600" height="400" decoding="async" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop" alt="Group fitness training">
-      <img width="600" height="400" decoding="async" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&h=400&fit=crop" alt="Corporate yoga and mindfulness">
-      <img width="600" height="400" decoding="async" src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop" alt="Modern workplace wellness">
+      <img width="900" height="675" decoding="async" src="/images/work/kolkata-founders-session-2.jpg" alt="Souvik De presenting SoulCare™ to founders and business leaders in Kolkata">
+      <img width="900" height="675" decoding="async" src="/images/work/prestige-city-wellness-2.jpg" alt="Group movement session delivered by SoulCare™ in Bengaluru">
+      <img width="900" height="675" decoding="async" src="/images/work/sobha-zumba-sparsh-1.jpg" alt="SoulCare™ Zumba instructor leading a session in Bengaluru">
+      <img width="900" height="675" decoding="async" src="/images/work/kolkata-founders-group.jpg" alt="Participants at the SoulCare™ Kolkata founders session">
     </div>
     <div class="hero-stats">
       <div>
@@ -388,8 +409,8 @@
 
 <!-- IMAGE STRIP -->
 <div class="image-strip">
-  <img decoding="async" loading="lazy" src="/images/gallery-art-1.jpg" alt="Employees in a SoulCare™ When Colors Speak workshop">
-  <img decoding="async" loading="lazy" src="/images/gallery-art-2.jpg" alt="Outdoor SoulCare™ reflection session with a corporate team">
+  <img decoding="async" loading="lazy" src="/images/gallery-art-1.jpg" alt="Participants in a SoulCare™ When Colors Speak workshop">
+  <img decoding="async" loading="lazy" src="/images/gallery-art-2.jpg" alt="Outdoor SoulCare™ reflection session">
   <img decoding="async" loading="lazy" src="/images/gallery-when-colors-speak.jpg" alt="Participants with their artwork after a When Colors Speak session">
   <img decoding="async" loading="lazy" src="/images/gallery-when-colors-speak-2.jpg" alt="Participant artwork from a When Colors Speak session">
 </div>
@@ -411,11 +432,11 @@
 
 
 <!-- OUR WORK -->
-<section class="work" id="work" aria-label="Our work">
+<section class="work" id="work" aria-label="Events and community programmes">
   <div class="section-inner">
-    <div class="section-label">Our Work</div>
+    <div class="section-label">Events and Community Programmes</div>
     <h2 class="section-title serif">Six months in. Already delivering.</h2>
-    <div class="section-subtitle">Real sessions with real teams and communities since we started in May 2026.</div>
+    <div class="section-subtitle">Community, public and online sessions we have delivered since May 2026. Corporate case studies will be added here as client programmes complete.</div>
 
     <div class="work-group">
       <h3 class="serif">Kolkata founders session</h3>
@@ -480,7 +501,7 @@
         <p>Most Indian employers spend meaningfully on employee wellness: health camps, insurance top-ups, occasional yoga sessions, one-off webinars. Almost none can prove what that spend actually changed.</p>
         <p><strong>SoulCare™ Workplace Solutions</strong> was built on one observation: corporate wellness in India is activity-driven, not outcome-driven. We built a system that changes that.</p>
         <p>Every SoulCare™ engagement produces a <strong>Workplace Performance Index (WPI)</strong> score at baseline, monitored during the programme and reassessed at completion, with a Return on Investment estimate in rupees where client data allows. Not participation rates. Not survey satisfaction. Measured change in the health factors that drive performance.</p>
-        <p>We are a private limited company headquartered in Guwahati, Assam, with operations in Bengaluru and expanding across India.</p>
+        <p>We are a private limited company headquartered in Guwahati, Assam, with teams in Bengaluru and Kolkata, and online programmes delivered across India.</p>
       </div>
       <div class="about-highlight">
         <h3 class="serif">Why measurement changes everything</h3>
@@ -508,7 +529,7 @@
     <div class="section-subtitle">Every programme is built on these four pillars. Clients can buy one or all four. The framework is what makes outcomes comparable.</div>
     <div class="pillars-grid">
       <div class="pillar-card fade-in">
-        <img width="500" height="300" decoding="async" loading="lazy" class="pillar-img" src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&h=300&fit=crop" alt="Physiotherapy and ergonomic assessment">
+        <img width="900" height="675" decoding="async" loading="lazy" class="pillar-img" src="/images/work/kolkata-fettle-consultation.jpg" alt="SoulCare™ one-to-one consultation in Kolkata">
         <div class="pillar-body">
           <div class="pillar-num">PILLAR 01</div>
           <h3 class="serif">Clinical and Pain Management</h3>
@@ -516,7 +537,7 @@
         </div>
       </div>
       <div class="pillar-card fade-in">
-        <img width="500" height="300" decoding="async" loading="lazy" class="pillar-img" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=300&fit=crop" alt="Corporate fitness and movement training">
+        <img width="900" height="675" decoding="async" loading="lazy" class="pillar-img" src="/images/work/sobha-zumba-sparsh-3.jpg" alt="Group movement session delivered by SoulCare™ in Bengaluru">
         <div class="pillar-body">
           <div class="pillar-num">PILLAR 02</div>
           <h3 class="serif">Movement and Performance</h3>
@@ -524,7 +545,7 @@
         </div>
       </div>
       <div class="pillar-card fade-in">
-        <img width="500" height="300" decoding="async" loading="lazy" class="pillar-img" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&h=300&fit=crop" alt="Corporate yoga and mindfulness practice">
+        <img width="900" height="675" decoding="async" loading="lazy" class="pillar-img" src="/images/gallery-art-2.jpg" alt="Outdoor SoulCare™ reflection session">
         <div class="pillar-body">
           <div class="pillar-num">PILLAR 03</div>
           <h3 class="serif">Mental Wellness and Stress</h3>
@@ -532,7 +553,7 @@
         </div>
       </div>
       <div class="pillar-card fade-in">
-        <img width="500" height="300" decoding="async" loading="lazy" class="pillar-img" src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=500&h=300&fit=crop" alt="Healthy nutrition and lifestyle guidance">
+        <div class="pillar-img pillar-graphic" aria-hidden="true"><span>Nutrition</span><span>Sleep</span><span>Habits</span><span>Prevention</span></div>
         <div class="pillar-body">
           <div class="pillar-num">PILLAR 04</div>
           <h3 class="serif">Lifestyle and Preventive Health</h3>
@@ -572,6 +593,22 @@
           <li>Final results report at programme end</li>
         </ul>
       </div>
+    </div>
+
+    <div class="wpi-sample fade-in" role="figure" aria-label="Sample WPI report with illustrative figures">
+      <div class="wpi-sample-head">
+        <div>
+          <div class="wpi-sample-tag">Sample report, illustrative figures</div>
+          <h3 class="serif">What your leadership receives</h3>
+        </div>
+        <div class="wpi-composite"><div class="wpi-composite-label">Composite WPI</div><div class="wpi-composite-num">57 <span>to</span> 70</div></div>
+      </div>
+      <div class="wpi-legend"><span class="lg base"></span>Baseline <span class="lg end"></span>Programme end</div>
+        <div class="wpi-row"><div class="wpi-row-label">Pain sub-index</div><div class="wpi-bars"><div class="wpi-bar base" style="width:58%"><span>58</span></div><div class="wpi-bar end" style="width:71%"><span>71</span></div></div></div>
+        <div class="wpi-row"><div class="wpi-row-label">Stress sub-index</div><div class="wpi-bars"><div class="wpi-bar base" style="width:52%"><span>52</span></div><div class="wpi-bar end" style="width:66%"><span>66</span></div></div></div>
+        <div class="wpi-row"><div class="wpi-row-label">Energy and movement</div><div class="wpi-bars"><div class="wpi-bar base" style="width:61%"><span>61</span></div><div class="wpi-bar end" style="width:73%"><span>73</span></div></div></div>
+        <div class="wpi-row"><div class="wpi-row-label">Lifestyle sub-index</div><div class="wpi-bars"><div class="wpi-bar base" style="width:55%"><span>55</span></div><div class="wpi-bar end" style="width:68%"><span>68</span></div></div></div>
+      <p class="wpi-sample-note">Illustrative figures to show the report format. Not client data. Actual scores come from your own baseline and reassessment.</p>
     </div>
     <div class="wpi-note">Workplace Performance Index (WPI): measured at baseline, monitored during the programme, and reassessed at completion to track changes across the four pillars.</div>
   </div>
@@ -676,7 +713,7 @@
         <div style="margin-top:2rem; display:flex; align-items:center; gap:1.5rem; flex-wrap:wrap;">
           <a href="https://www.linkedin.com/company/fitplacetowork/" target="_blank" rel="noopener noreferrer" style="color:var(--gold); font-weight:600; text-decoration:none;">Fit Place To Work</a>
           <span style="color:rgba(255,255,255,0.3);">|</span>
-          <span style="color:rgba(255,255,255,0.6); font-size:0.85rem; font-style:italic;">Silver and Gold certification complimentary for the first 5 companies</span>
+          <span style="color:rgba(255,255,255,0.6); font-size:0.85rem; font-style:italic;">Founding cohort: Fit Place to Work certification included for the first 5 organisations</span>
         </div>
       </div>
       <div style="flex:1 1 300px; max-width:380px; text-align:center;">
@@ -799,14 +836,18 @@
     </div>
     <div class="footer-contact">
       <h4>Where We Work</h4>
-      <a href="#">Guwahati, Assam (HQ)</a>
-      <a href="#">Bengaluru, Karnataka</a>
-      <a href="#">Shillong, Meghalaya</a>
-      <a href="#">Chandigarh, Punjab</a>
-      <a href="#">Mumbai, Maharashtra</a>
-      <a href="#">Pune, Maharashtra</a>
-      <a href="#">Kolkata, West Bengal</a>
-      <a href="#">Bhubaneswar, Odisha</a>
+      <span class="footer-city">Guwahati, Assam (HQ)</span>
+      <span class="footer-city">Bengaluru, Karnataka</span>
+      <span class="footer-city">Kolkata, West Bengal</span>
+      <span class="footer-city">Online across India</span>
+    </div>
+    <div class="footer-contact">
+      <h4>Explore</h4>
+      <a href="#pillars">The Framework</a>
+      <a href="#team">Our Team</a>
+      <a href="/tarundeep-kaur">Workshops</a>
+      <a href="/webinars">Webinars</a>
+      <a href="/souvik-de">About the Founder</a>
     </div>
   </div>
   <div class="footer-bottom">
