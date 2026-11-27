@@ -302,6 +302,8 @@
     .work-stat .proof-label { margin-bottom: 0.8rem; }
     .work-grid img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; display: block; }
     .work-grid > * { min-width: 0; }
+    .work-grid-2 { grid-template-columns: 1fr 1fr; }
+    .work-grid img.work-full { grid-column: 1 / -1; aspect-ratio: auto; object-fit: contain; }
     @media (max-width: 700px) { .work { padding: 3.5rem 1.2rem; } .work-grid { grid-template-columns: 1fr 1fr; } .work-grid img:first-child { grid-column: 1 / -1; } .work-stat { aspect-ratio: auto; padding: 0.8rem; } .work-stat .proof-num { font-size: 1.7rem; } .work-stat .proof-label { font-size: 0.85rem; margin-bottom: 0.3rem; } }
     .vt-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
     .vt { margin: 0; min-width: 0; }
@@ -469,10 +471,10 @@
     <div class="work-group">
       <h3 class="serif">International Yoga Day live online session</h3>
       <p class="work-meta">Live online across India · 21 June 2026 · 48 registrations, 30 joined live on a Sunday at 8 AM</p>
-      <div class="work-grid">
+      <div class="work-grid work-grid-2">
+        <img decoding="async" loading="lazy" class="work-full" src="/images/work/yoga-day-online-live.jpg" alt="Nayan Mallick leading the live SoulCare™ International Yoga Day session, with participants following from home across India" width="1913" height="910">
         <img decoding="async" loading="lazy" src="/images/work/yoga-day-online-1.jpg" alt="Participants from across India on the live International Yoga Day session" width="900" height="675">
         <img decoding="async" loading="lazy" src="/images/work/yoga-day-online-2.jpg" alt="SoulCare™ specialists closing the International Yoga Day session" width="900" height="675">
-        <img decoding="async" loading="lazy" src="/images/work/yoga-day-online-nayan.jpg" alt="Nayan Mallick leading the SoulCare™ International Yoga Day live session" width="900" height="675">
       </div>
     </div>
 
