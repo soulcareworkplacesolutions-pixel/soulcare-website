@@ -295,6 +295,12 @@
     .footer-brand p, .footer-contact a { font-size: 1rem; line-height: 1.6; }
     .wpi-card li, .team-card .team-role, .compliance-item h4 { font-size: 1rem; }
     @media (max-width: 600px) { body { font-size: 17px; } }
+    .trust-strip { background: var(--teal-light); border-bottom: 1px solid var(--divider); padding: 1.1rem 2rem; }
+    .trust-strip-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 1.5rem; align-items: center; }
+    .trust-item { display: flex; align-items: center; gap: 0.8rem; }
+    .trust-mark { flex: 0 0 auto; background: var(--teal); color: #fff; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.35rem 0.7rem; border-radius: 999px; }
+    .trust-text { color: var(--teal-dark); font-size: 0.92rem; line-height: 1.4; }
+    @media (max-width: 800px) { .trust-strip-inner { grid-template-columns: 1fr; gap: 0.7rem; } }
 </style>
 </head>
 <body>
@@ -355,6 +361,15 @@
         <div class="hero-stat-label">Google rating from our first 10 reviews</div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="trust-strip" aria-label="Recognition and registrations">
+  <div class="trust-strip-inner">
+    <div class="trust-item"><span class="trust-mark">Recognised</span><span class="trust-text">Startup recognised by the Assam Innovation and Startup Foundation, Government of Assam</span></div>
+    <div class="trust-item"><span class="trust-mark">MSME</span><span class="trust-text">Udyam registered: <span style="white-space:nowrap">UDYAM-AS-03-0090984</span></span></div>
+    <div class="trust-item"><span class="trust-mark">MASI</span><span class="trust-text">MASI ID: <span style="white-space:nowrap">MASI2026/1132</span></span></div>
   </div>
 </section>
 
